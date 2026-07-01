@@ -1,0 +1,85 @@
+@ShopApi_HostAddress = http://localhost:5228
+
+### Product
+###
+GET {{ShopApi_HostAddress}}/api/product/
+
+###
+GET {{ShopApi_HostAddress}}/api/product/1
+
+###
+GET {{ShopApi_HostAddress}}/api/product/search
+
+###
+GET {{ShopApi_HostAddress}}/api/product/search?title=Phone+1
+
+###
+DELETE {{ShopApi_HostAddress}}/api/product/2
+
+###
+POST {{ShopApi_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  "Name": "Milk",
+  "Price": 60.000,
+}
+
+###
+PUT {{ShopApi_HostAddress}}/api/product/2
+Content-Type: application/json
+
+{
+  "Name": "Milk",
+  "Price": 78.9026,
+}
+
+### Category
+###
+GET {{ShopApi_HostAddress}}/api/category/
+
+###
+GET {{ShopApi_HostAddress}}/api/category/4
+
+###
+GET {{ShopApi_HostAddress}}/api/category/search
+
+###
+GET {{ShopApi_HostAddress}}/api/category/search?title=Electronics+2
+
+###
+DELETE {{ShopApi_HostAddress}}/api/category/5
+
+###
+POST {{ShopApi_HostAddress}}/api/category
+Content-Type: application/json
+
+{
+  "Name": "Beauty",
+  "Slug": "beauty"
+}
+
+###
+PUT {{ShopApi_HostAddress}}/api/category/4
+Content-Type: application/json
+
+{
+  "Name": "Electronics 2",
+  "Slug": "electronics"
+}
+
+### Users
+
+###
+GET {{ShopApi_HostAddress}}/api/user
+
+###
+POST {{ShopApi_HostAddress}}/api/user/register
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "Login": "sdd",
+  "HashPassword": "kk",
+  "Email": "kk@mail.com"
+}
