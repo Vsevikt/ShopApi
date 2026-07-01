@@ -1,5 +1,0 @@
-wwwroot\images\beauty.jpg
-wwwroot\images\default-avatar.png
-wwwroot\images\electronics.jpg
-wwwroot\images\fashion.jpg
-wwwroot\images\home.jpg

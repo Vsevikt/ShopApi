@@ -2,7 +2,7 @@
 using ShopApi.Filters;
 using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.Product;
-using ShopApplication.Interfaces;
+using ShopApi.Interfaces;
 using ShopDomain.Models;
 //using ShopApp.Services;
 
@@ -14,7 +14,7 @@ namespace ShopApi.Controllers
     public class ProductController(IProductService _productService) : ControllerBase
     {
         [HttpGet]
-        public List<ProductReadDto> GetProducts()
+        public List<ProductReadDTO> GetProducts()
         {
             return _productService.GetAllProducts();
         }
@@ -47,7 +47,7 @@ namespace ShopApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddNewProduct([FromBody] ProductCreateDto dto)
+        public IActionResult AddNewProduct([FromBody] ProductCreateDTO dto)
         {
             if (string.IsNullOrWhiteSpace(dto?.Name))
                 return BadRequest("Product null");
@@ -61,7 +61,7 @@ namespace ShopApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateProductById(int id, [FromBody] ProductUpdateDto dto) 
+        public IActionResult UpdateProductById(int id, [FromBody] ProductUpdateDTO dto) 
         {
             var products = _productService.GetAllProducts();
             var findProduct = products.FirstOrDefault(p => p.Id == id);

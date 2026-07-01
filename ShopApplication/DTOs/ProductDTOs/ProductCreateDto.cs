@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopApplication.DTOs.Product
 {
-    public class ProductCreateDto
+    public class ProductCreateDTO
     {
         public string Name { get; set; } = null!;
         public decimal Price { get; set; }

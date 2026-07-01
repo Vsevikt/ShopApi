@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopApplication.DTOs.Product
 {
-    public class ProductReadDto
+    public class ProductReadDTO
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;

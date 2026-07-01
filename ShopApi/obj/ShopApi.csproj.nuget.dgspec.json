@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[10.0.9, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -555,9 +559,6 @@
             "projectReferences": {
               "G:\\tasks\\ShopApi\\ShopDomain\\ShopDomain.csproj": {
                 "projectPath": "G:\\tasks\\ShopApi\\ShopDomain\\ShopDomain.csproj"
-              },
-              "G:\\tasks\\ShopApi\\ShopInfrastructure\\ShopInfrastructure.csproj": {
-                "projectPath": "G:\\tasks\\ShopApi\\ShopInfrastructure\\ShopInfrastructure.csproj"
               }
             }
           }
@@ -1264,6 +1265,9 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
+              "G:\\tasks\\ShopApi\\ShopApplication\\ShopApplication.csproj": {
+                "projectPath": "G:\\tasks\\ShopApi\\ShopApplication\\ShopApplication.csproj"
+              },
               "G:\\tasks\\ShopApi\\ShopDomain\\ShopDomain.csproj": {
                 "projectPath": "G:\\tasks\\ShopApi\\ShopDomain\\ShopDomain.csproj"
               }

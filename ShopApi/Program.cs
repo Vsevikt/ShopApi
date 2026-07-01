@@ -1,11 +1,13 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
-using ShopApplication.Interfaces;
+using ShopApi.Interfaces;
 using ShopApi.Middelwares;
 using ShopApi.Middlewares;
-using ShopApplication.Services;
+using ShopApi.Services;
+using ShopApplication.Interfaces.Repository;
 using ShopInfrastructure.Data;
+using ShopInfrastructure.Repositories;
 using System.Reflection;
 
 namespace ShopApi
@@ -53,11 +55,16 @@ namespace ShopApi
 
             builder.Services.AddControllers();
 
-            //builder.Services.AddSingleton<IProductService, ProductService>();
-            //builder.Services.AddSingleton<ICategoryService, CategoryService>();
+            // SERVICES
 
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+            // REPOSITORIES
+
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+            //----
 
             var app = builder.Build();
 

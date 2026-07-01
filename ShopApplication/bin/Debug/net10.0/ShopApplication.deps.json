@@ -11,8 +11,7 @@
           "Microsoft.EntityFrameworkCore": "10.0.9",
           "Microsoft.EntityFrameworkCore.Design": "10.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.9",
-          "ShopDomain": "1.0.0",
-          "ShopInfrastructure": "1.0.0"
+          "ShopDomain": "1.0.0"
         },
         "runtime": {
           "ShopApplication.dll": {}
@@ -914,19 +913,6 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "ShopInfrastructure/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "10.0.9",
-          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.9",
-          "ShopDomain": "1.0.0"
-        },
-        "runtime": {
-          "ShopInfrastructure.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -1315,11 +1301,6 @@
       "hashPath": "system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
     },
     "ShopDomain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ShopInfrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

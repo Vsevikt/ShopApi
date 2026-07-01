@@ -24,6 +24,12 @@ namespace ShopDomain.Models
         [Column("slug")]
         public string Slug { get; set; } = string.Empty;
 
+        [Column("url")]
+        public string Url { get; set; } = string.Empty;
+
+        [Column("is_active")]
+        public bool IsActive { get; set; } = true;
+
         [Column("parent_id")]
         public int? ParentId { get; set; }
 

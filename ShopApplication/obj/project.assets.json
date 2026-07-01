@@ -1261,21 +1261,6 @@
         "runtime": {
           "bin/placeholder/ShopDomain.dll": {}
         }
-      },
-      "ShopInfrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "10.0.9",
-          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.9",
-          "ShopDomain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/ShopInfrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ShopInfrastructure.dll": {}
-        }
       }
     }
   },
@@ -3688,11 +3673,6 @@
       "type": "project",
       "path": "../ShopDomain/ShopDomain.csproj",
       "msbuildProject": "../ShopDomain/ShopDomain.csproj"
-    },
-    "ShopInfrastructure/1.0.0": {
-      "type": "project",
-      "path": "../ShopInfrastructure/ShopInfrastructure.csproj",
-      "msbuildProject": "../ShopInfrastructure/ShopInfrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3701,8 +3681,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 10.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.9",
-      "ShopDomain >= 1.0.0",
-      "ShopInfrastructure >= 1.0.0"
+      "ShopDomain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3740,9 +3719,6 @@
           "projectReferences": {
             "G:\\tasks\\ShopApi\\ShopDomain\\ShopDomain.csproj": {
               "projectPath": "G:\\tasks\\ShopApi\\ShopDomain\\ShopDomain.csproj"
-            },
-            "G:\\tasks\\ShopApi\\ShopInfrastructure\\ShopInfrastructure.csproj": {
-              "projectPath": "G:\\tasks\\ShopApi\\ShopInfrastructure\\ShopInfrastructure.csproj"
             }
           }
         }

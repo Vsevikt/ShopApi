@@ -16,3 +16,5 @@ G:\tasks\ShopApi\ShopInfrastructure\obj\Debug\net10.0\refint\ShopInfrastructure.
 G:\tasks\ShopApi\ShopInfrastructure\obj\Debug\net10.0\ShopInfrastructure.pdb
 G:\tasks\ShopApi\ShopInfrastructure\obj\Debug\net10.0\ShopInfrastructure.genruntimeconfig.cache
 G:\tasks\ShopApi\ShopInfrastructure\obj\Debug\net10.0\ref\ShopInfrastructure.dll
+G:\tasks\ShopApi\ShopInfrastructure\bin\Debug\net10.0\ShopApplication.dll
+G:\tasks\ShopApi\ShopInfrastructure\bin\Debug\net10.0\ShopApplication.pdb
