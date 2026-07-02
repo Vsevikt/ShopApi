@@ -36,111 +36,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ShopApi.Controllers.ProductController",
-    "Method": "GetProducts",
-    "RelativePath": "api/Product",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[ShopApplication.DTOs.Product.ProductReadDTO, ShopApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.ProductController",
-    "Method": "AddNewProduct",
-    "RelativePath": "api/Product",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "ShopApplication.DTOs.Product.ProductCreateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.ProductController",
-    "Method": "GetProductById",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.ProductController",
-    "Method": "UpdateProductById",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "ShopApplication.DTOs.Product.ProductUpdateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.ProductController",
-    "Method": "DeleteProductById",
-    "RelativePath": "api/Product/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.ProductController",
-    "Method": "SearchItem",
-    "RelativePath": "api/Product/search",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "title",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "ShopApi.Controllers.UserController",
     "Method": "Register",
     "RelativePath": "api/user/register",
@@ -158,27 +53,7 @@
   },
   {
     "ContainingType": "ShopApi.Controllers.CategoryController",
-    "Method": "GetCategories",
-    "RelativePath": "api/v1/Category",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[ShopApplication.DTOs.Category.CategoryReadDTO, ShopApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.CategoryController",
-    "Method": "AddNewCategory",
+    "Method": "CreateCategory",
     "RelativePath": "api/v1/Category",
     "HttpMethod": "POST",
     "IsController": true,
@@ -190,6 +65,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.CategoryController",
+    "Method": "GetAllCategories",
+    "RelativePath": "api/v1/Category",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -246,17 +131,80 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ShopApi.Controllers.CategoryController",
-    "Method": "SearchItem",
-    "RelativePath": "api/v1/Category/search",
+    "ContainingType": "ShopApi.Controllers.ProductController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/v1/Product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ShopApplication.DTOs.Product.ProductCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.ProductController",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/v1/Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.ProductController",
+    "Method": "GetProductById",
+    "RelativePath": "api/v1/Product/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "title",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.ProductController",
+    "Method": "UpdateProductById",
+    "RelativePath": "api/v1/Product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ShopApplication.DTOs.Product.ProductUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.ProductController",
+    "Method": "DeleteProductById",
+    "RelativePath": "api/v1/Product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

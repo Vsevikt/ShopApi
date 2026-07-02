@@ -34,7 +34,7 @@ namespace ShopDomain.Models
         public int? ParentId { get; set; }
 
         [ForeignKey(nameof(ParentId))]
-        public Category? Parent { get; set; }
+        public Category? Parent { get; set; } = null!;
 
         //Navigation properties
         public ICollection<Category> SubCategories { get; set; } = new List<Category>();

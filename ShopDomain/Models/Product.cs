@@ -30,7 +30,7 @@ public class Product : BaseEntity
 
     // FK до категорії
     [Column("category_id")]
-    public int CategoryId { get; set; }
+    public int? CategoryId { get; set; }
 
     [ForeignKey(nameof(CategoryId))]
     public Category Category { get; set; } = null!;
