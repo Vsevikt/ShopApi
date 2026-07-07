@@ -5,9 +5,6 @@ namespace ShopApi.Services
 {
     public class ImageService(IWebHostEnvironment _environment) : IImageService
     {
-
-        //private static string _dirname = "images"; // string.IsNullOrEmpty(dto.Url) ? "" : dto.Url // "categories" // "images"
-
         public async Task<string> SaveFileAsync(IFormFile file, string _dirname)
         {
             if (file == null || file.Length == 0)

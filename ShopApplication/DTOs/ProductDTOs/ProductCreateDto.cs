@@ -9,8 +9,8 @@ namespace ShopApplication.DTOs.Product
     {
         public string Name { get; set; } = string.Empty;
         public decimal Price { get; set; }
-
-        //[DefaultValue(null)]
+        public int StockQty { get; set; } = 0;
+        public List<string> ImageUrls { get; set; } = new();
         public int? CategoryId { get; set; }
     }
 }

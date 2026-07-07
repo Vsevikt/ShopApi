@@ -12,14 +12,31 @@ namespace ShopApplication.Services
 {
     public class ProductService(IProductRepository _repository) : IProductService
     {
+        //public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
+        //{
+        //    return await _repository.AddProductAsync(new Product()
+        //    {
+        //        Name = dto.Name,
+        //        Price = dto.Price,
+        //        CategoryId = dto.CategoryId == 0 ? null : dto.CategoryId
+        //    }); 
+        //}
+
         public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
         {
-            return await _repository.AddProductAsync(new Product()
+            var product = new Product()
             {
                 Name = dto.Name,
                 Price = dto.Price,
-                CategoryId = dto.CategoryId == 0 ? null : dto.CategoryId
-            }); 
+                StockQty = dto.StockQty,
+                CategoryId = dto.CategoryId,
+                Images = dto.ImageUrls.Select(url => new ProductImage
+                {
+                    Url = url
+                }).ToList()
+            };
+
+            return await _repository.AddProductAsync(product);
         }
 
         public async Task<ICollection<ProductReadDTO>> GetAllProductsAsync()
@@ -34,7 +51,11 @@ namespace ShopApplication.Services
                     Id = product.Id,
                     Name = product.Name,
                     Price = product.Price,
-                    CategoryName = product.Category.Name
+                    StockQty = product.StockQty,
+                    CategoryName = product.Category?.Name,
+                    ImageUrls = product.Images
+                        .Select(img => img.Url)
+                        .ToList()
                 });
             }
 
@@ -53,12 +74,31 @@ namespace ShopApplication.Services
                 Id = product.Id,
                 Name = product.Name,
                 Price = product.Price,
-                CategoryName = product.Category.Name
+                StockQty = product.StockQty,
+                CategoryName = product.Category?.Name,
+                ImageUrls = product.Images
+                    .Select(img => img.Url)
+                    .ToList()
             };
         }
 
         public async Task<bool> UpdateProductAsync(ProductUpdateDTO dto)
         {
+            //var product = await _repository.GetProductAsync(dto.Id);
+
+            //if (product == null)
+            //    return false;
+
+            //product.Name = dto.Name;
+            //product.Price = dto.Price;
+            //product.StockQty = dto.StockQty;
+            //product.ImageUrls = product.Images
+            //    .Select(img => img.Url)
+            //    .ToList();
+            //product.CategoryId = dto.CategoryId;
+
+            //return await _repository.EditProductAsync(product);
+
             var product = await _repository.GetProductAsync(dto.Id);
 
             if (product == null)
@@ -66,6 +106,20 @@ namespace ShopApplication.Services
 
             product.Name = dto.Name;
             product.Price = dto.Price;
+            product.StockQty = dto.StockQty;
+            product.CategoryId = dto.CategoryId;
+
+
+            foreach (var url in dto.ImageUrls)
+            {
+                product.Images.Add(new ProductImage
+                {
+                    Url = url,
+                    ProductId = product.Id
+                });
+            }
+
+
             return await _repository.EditProductAsync(product);
         }
 

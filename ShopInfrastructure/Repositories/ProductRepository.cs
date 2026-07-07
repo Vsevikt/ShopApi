@@ -21,6 +21,7 @@ namespace ShopInfrastructure.Repositories
         {
             var products = await _context.Products
                 .Include(p => p.Category)
+                .Include(p => p.Images)
                 .ToListAsync();
             return products;
         }
@@ -29,6 +30,7 @@ namespace ShopInfrastructure.Repositories
         {
             var product = await _context.Products
                 .Include(p => p.Category)
+                .Include(p => p.Images)
                 .FirstOrDefaultAsync(p => p.Id == id);
             return product;
         }

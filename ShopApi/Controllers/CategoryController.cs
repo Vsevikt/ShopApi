@@ -37,10 +37,6 @@ namespace ShopApi.Controllers
             var id = await _categoryService.CreateCategoryAsync(createDto);
 
             return Ok($"Category created {id}");
-            //return CreatedAtAction(nameof(GetCategoryById),
-            //        // назва методу new { id },              
-            //        // параметри маршруту new { id });             
-            //        // тіло відповіді
         }
 
         //[HttpPost]
