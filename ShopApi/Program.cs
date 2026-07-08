@@ -5,6 +5,7 @@ using ShopApi.Services;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Repository;
 using ShopApplication.Interfaces.Services;
+using ShopApplication.Mapping;
 using ShopApplication.Services;
 using ShopInfrastructure.Data;
 using ShopInfrastructure.Repositories;
@@ -32,7 +33,14 @@ namespace ShopApi
 
             });
 
-            // ================= CORS =================
+            // AutoMapper
+
+            builder.Services.AddAutoMapper(
+                _ => { },
+                typeof(CategoryProfile).Assembly
+            );
+
+            // CORS 
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", policy =>

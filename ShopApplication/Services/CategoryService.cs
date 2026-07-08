@@ -1,4 +1,5 @@
-﻿using ShopApplication.DTOs.Category;
+﻿using AutoMapper;
+using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.Interfaces.Repository;
 using ShopApplication.Interfaces.Services;
@@ -9,53 +10,30 @@ using System.Text;
 
 namespace ShopApplication.Services;
 
-public class CategoryService(ICategoryRepository _repository) : ICategoryService
+public class CategoryService(ICategoryRepository _repository, IMapper _mapper) : ICategoryService
 {
     public async Task<int?> CreateCategoryAsync(CategoryCreateDTO dto)
     {
-        return await _repository.AddCategoryAsync(new Category()
-        {
-            Name = dto.Name,
-            Slug = dto.Slug,
-            Url = dto.Url,
-            ParentId = dto.ParentId == 0 ? null : dto.ParentId
-        });
+        var category = _mapper.Map<Category>(dto);
+        return await _repository.AddCategoryAsync(category);
     }
 
     public async Task<ICollection<CategoryReadDTO>> GetAllCategoriesAsync()
     {
         var categories = await _repository.GetCategoriesAsync();
-        var result = new List<CategoryReadDTO>();
-
-        foreach (var category in categories)
-        {
-            result.Add(new CategoryReadDTO()
-            {
-                Id = category.Id,
-                Name = category.Name,
-                Slug = category.Slug,
-                ParentId = category.ParentId
-            });
-        }
-
-        return result;
+        List<CategoryReadDTO> dtos = null;
+        if (categories != null && categories.Count > 0)
+            dtos = _mapper.Map<List<CategoryReadDTO>>(categories);
+        return dtos;
     }
 
     public async Task<CategoryReadDTO?> GetCategoryByIdAsync(int id)
     {
+        CategoryReadDTO? dto = null;
         var category = await _repository.GetCategoryAsync(id);
-
-        if (category == null)
-            return null;
-
-        return new CategoryReadDTO()
-        {
-            Id = category.Id,
-            Name = category.Name,
-            Slug = category.Slug,
-            Url = category.Url = string.IsNullOrEmpty(category.Url) ? "" : category.Url,
-            ParentId = category.ParentId
-        };
+        if (category != null)
+            dto = _mapper.Map<CategoryReadDTO>(category);
+        return dto;
     }
 
     public async Task<bool> UpdateCategoryAsync(CategoryUpdateDTO dto)
@@ -64,10 +42,8 @@ public class CategoryService(ICategoryRepository _repository) : ICategoryService
 
         if (category == null)
             return false;
-
-        category.Name = dto.Name;
-        category.Slug = dto.Slug;
-        category.ParentId = dto.ParentId = dto.ParentId == 0 ? null : dto.ParentId; 
+        _mapper.Map(dto, category);
+        category.ParentId = dto.ParentId = dto.ParentId == 0 ? null : dto.ParentId;
         return await _repository.EditCategoryAsync(category);
     }
 
