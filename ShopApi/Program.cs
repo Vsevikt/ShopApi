@@ -32,6 +32,17 @@ namespace ShopApi
 
             });
 
+            // ================= CORS =================
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -72,6 +83,7 @@ namespace ShopApi
 
             app.UseSwagger();
             app.UseSwaggerUI();
+            app.UseCors("AllowAll");
 
             if (app.Environment.IsDevelopment())
             {
