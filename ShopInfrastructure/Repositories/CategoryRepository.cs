@@ -27,6 +27,21 @@ namespace ShopInfrastructure.Repositories
             return await _context.Categories.FindAsync(id);
         }
 
+        public async Task<ICollection<Category>> GetParentCategoriesAsync()
+        {
+            return await _context.Categories.Where(c => c.ParentId == null).ToListAsync();
+        }
+
+        public async Task<ICollection<Category>> GetChildCategoriesAsync()
+        {
+            return await _context.Categories.Where(c => c.ParentId != null).ToListAsync();
+        }
+
+        public async Task<ICollection<Category>> GetTreeCategoriesAsync()
+        {
+            return await _context.Categories.ToListAsync();
+        }
+
         public async Task<bool> EditCategoryAsync(Category category)
         {
             _context.Categories.Update(category);

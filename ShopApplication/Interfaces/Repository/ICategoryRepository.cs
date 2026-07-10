@@ -12,5 +12,8 @@ namespace ShopApplication.Interfaces.Repository
         Task<Category?> GetCategoryAsync(int id);
         Task<bool> EditCategoryAsync(Category category);
         Task<int?> RemoveCategoryAsync(int id);
+        Task<ICollection<Category>> GetParentCategoriesAsync();
+        Task<ICollection<Category>> GetChildCategoriesAsync();
+        Task<ICollection<Category>> GetTreeCategoriesAsync();
     }
 }

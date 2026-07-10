@@ -127,9 +127,34 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "ShopApplication.DTOs.CategoryDTOs.CategoryUpdateDTO",
-        "IsRequired": true
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Url",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ParentId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -148,6 +173,36 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.CategoryController",
+    "Method": "GetChildCategories",
+    "RelativePath": "api/v1/Category/child",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.CategoryController",
+    "Method": "GetParentCategories",
+    "RelativePath": "api/v1/Category/parent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.CategoryController",
+    "Method": "GetTreeCategories",
+    "RelativePath": "api/v1/Category/tree",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

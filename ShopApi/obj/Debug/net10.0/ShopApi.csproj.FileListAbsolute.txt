@@ -4,7 +4,6 @@ G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.GeneratedMSBuildEditorConfig.
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.AssemblyInfoInputs.cache
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.AssemblyInfo.cs
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.csproj.CoreCompileInputs.cache
-G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.MvcApplicationPartsAssemblyInfo.cs
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.MvcApplicationPartsAssemblyInfo.cache
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.sourcelink.json
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\appsettings.Development.json

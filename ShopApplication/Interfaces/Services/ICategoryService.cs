@@ -13,5 +13,8 @@ namespace ShopApplication.Interfaces.Services
         Task<CategoryReadDTO?> GetCategoryByIdAsync(int id);
         Task<bool> UpdateCategoryAsync(CategoryUpdateDTO dto);
         Task<int?> DeleteCategoryAsync(int id);
+        Task<ICollection<CategoryReadDTO>> GetCategoriesByParentAsync();
+        Task<ICollection<CategoryReadDTO>> GetCategoriesByChildAsync();
+        Task<ICollection<CategoryReadDTO>> GetCategoriesByTreeAsync();
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using ShopApi.Requests.Categories;
 using ShopApi.Services;
 using ShopApplication.DTOs;
@@ -8,18 +9,29 @@ using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Services;
 using ShopDomain.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CategoryController(ICategoryService _categoryService, IImageService _imageService, IConfiguration _configuration) : ControllerBase
+    public class CategoryController(ICategoryService _categoryService, IImageService _imageService, IConfiguration _configuration, IConfiguration _mapper) : ControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromForm] CategoryCreateRequest dto)
         {
-            if (dto.Image != null)
-                dto.Url = (await _imageService.SaveFileAsync(dto.Image, _configuration["DirnameForFiles:Categories"])) ?? string.Empty;
+            var maxImages = _configuration.GetValue<int>("FileSettings:MaxProductImages");
+            var maxSizeMb = _configuration.GetValue<int>("FileSettings:MaxFileSizeMb");
+            var maxSizeBytes = maxSizeMb * 1024 * 1024;
+
+            var allowedExtensions = _configuration
+                .GetSection("FileSettings:AllowedExtensions")
+                .Get<string[]>();
+
+            dto.Url = await _imageService.SaveFileAsync(dto.Image, _configuration["DirnameForFiles:Categories"]);
+
+            if (dto.Image.Length > maxSizeBytes)
+                return BadRequest($"Maximum file size is {maxSizeMb} MB.");
 
             var createDto = new CategoryCreateDTO
             {
@@ -28,7 +40,6 @@ namespace ShopApi.Controllers
                 Slug = dto.Slug,
                 ParentId = dto.ParentId == 0 ? null : dto.ParentId,
             };
-
 
             var id = await _categoryService.CreateCategoryAsync(createDto);
 
@@ -53,13 +64,61 @@ namespace ShopApi.Controllers
             return Ok(categories);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCategoryById(int id, [FromBody] CategoryUpdateDTO dto)
+        [HttpGet("parent")]
+        public async Task<IActionResult> GetParentCategories()
         {
-            var category = await _categoryService.UpdateCategoryAsync(dto);
+            var categories = await _categoryService.GetCategoriesByParentAsync();
+            return Ok(categories);
+        }
 
-            if (category == null)
-                return NotFound("Category not found");
+        [HttpGet("child")]
+        public async Task<IActionResult> GetChildCategories()
+        {
+            var categories = await _categoryService.GetCategoriesByChildAsync();
+            return Ok(categories);
+        }
+
+        [HttpGet("tree")]
+        public async Task<IActionResult> GetTreeCategories()
+        {
+            var categories = await _categoryService.GetCategoriesByTreeAsync();
+            return Ok(categories);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategoryById(int id, [FromForm] CategoryUpdateRequest dto)
+        {
+            var maxImages = _configuration.GetValue<int>("FileSettings:MaxProductImages");
+            var maxSizeMb = _configuration.GetValue<int>("FileSettings:MaxFileSizeMb");
+            var maxSizeBytes = maxSizeMb * 1024 * 1024;
+
+            var allowedExtensions = _configuration
+                .GetSection("FileSettings:AllowedExtensions")
+                .Get<string[]>();
+
+            var extension = Path.GetExtension(dto.Image.FileName).ToLower();
+
+            if (!allowedExtensions.Contains(extension))
+                return BadRequest("Invalid file type.");
+
+            if (dto.Image.Length > maxSizeBytes)
+                return BadRequest($"Maximum file size is {maxSizeMb} MB.");
+
+            dto.Url = await _imageService.SaveFileAsync(dto.Image, _configuration["DirnameForFiles:Categories"]);
+
+            var updateDto = new CategoryUpdateDTO
+            {
+                Id = id,
+                Name = dto.Name,
+                Slug = dto.Slug,
+                Url = dto.Url,
+                ParentId = dto.ParentId == 0 ? null : dto.ParentId
+            };
+
+            var category = await _categoryService.UpdateCategoryAsync(updateDto);
+
+            if (!category)
+                return NotFound("Category not found.");
 
             return Ok("Category updated");
         }

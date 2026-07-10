@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
@@ -13,69 +14,30 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class ProductService(IProductRepository _repository, IImageService _imageService) : IProductService
+    public class ProductService(IProductRepository _repository, IImageService _imageService, IMapper _mapper) : IProductService
     {
         public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
         {
-            var product = new Product()
-            {
-                Name = dto.Name,
-                Price = dto.Price,  
-                StockQty = dto.StockQty,
-                CategoryId = dto.CategoryId,
-                Images = dto.ImageUrls
-                .Select((url, index) => new ProductImage
-                {
-                    Url = url,
-                    IsPrimary = index == 0
-                })
-                .ToList()
-            };
-
+            var product = _mapper.Map<Product>(dto);
             return await _repository.AddProductAsync(product);
         }
 
         public async Task<ICollection<ProductReadDTO>> GetAllProductsAsync()
         {
             var products = await _repository.GetProductsAsync();
-            var result = new List<ProductReadDTO>();
-
-            foreach (var product in products)
-            {
-                result.Add(new ProductReadDTO()
-                {
-                    Id = product.Id,
-                    Name = product.Name,
-                    Price = product.Price,
-                    StockQty = product.StockQty,
-                    CategoryName = product.Category?.Name,
-                    ImageUrls = product.Images
-                        .Select(img => img.Url)
-                        .ToList()
-                });
-            }
-
-            return result;
+            List<ProductReadDTO> dtos = null;
+            if (products != null && products.Count > 0)
+                dtos = _mapper.Map<List<ProductReadDTO>>(products);
+            return dtos;
         }
 
         public async Task<ProductReadDTO?> GetProductByIdAsync(int id)
         {
+            ProductReadDTO? dto = null;
             var product = await _repository.GetProductAsync(id);
-
-            if (product == null)
-                return null;
-
-            return new ProductReadDTO()
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Price = product.Price,
-                StockQty = product.StockQty,
-                CategoryName = product.Category?.Name,
-                ImageUrls = product.Images
-                    .Select(img => img.Url)
-                    .ToList()
-            };
+            if (product != null)
+                dto = _mapper.Map<ProductReadDTO>(product);
+            return dto;
         }
 
         public async Task<bool> UpdateProductAsync(ProductUpdateDTO dto)
