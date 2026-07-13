@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopApplication.DTOs.Category
 {
-    public class CategoryCreateDTO
+    public class CategoryCreate
     {
         public string Name { get; set; } = string.Empty;
         public string Slug { get; set; } = string.Empty;

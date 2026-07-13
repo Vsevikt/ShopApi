@@ -2,7 +2,7 @@
 
 namespace ShopApi.Requests.Products
 {
-    public class ProductUpdateRequest : ProductUpdateDTO
+    public class ProductUpdateRequest : ProductUpdate
     {
         public List<IFormFile> Images { get; set; } = new();
     }

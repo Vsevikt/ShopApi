@@ -16,31 +16,31 @@ namespace ShopApplication.Services
 {
     public class ProductService(IProductRepository _repository, IImageService _imageService, IMapper _mapper) : IProductService
     {
-        public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
+        public async Task<int?> CreateProductAsync(ProductCreate dto)
         {
             var product = _mapper.Map<Product>(dto);
             return await _repository.AddProductAsync(product);
         }
 
-        public async Task<ICollection<ProductReadDTO>> GetAllProductsAsync()
+        public async Task<ICollection<ProductRead>> GetAllProductsAsync()
         {
             var products = await _repository.GetProductsAsync();
-            List<ProductReadDTO> dtos = null;
+            List<ProductRead> dtos = null;
             if (products != null && products.Count > 0)
-                dtos = _mapper.Map<List<ProductReadDTO>>(products);
+                dtos = _mapper.Map<List<ProductRead>>(products);
             return dtos;
         }
 
-        public async Task<ProductReadDTO?> GetProductByIdAsync(int id)
+        public async Task<ProductRead?> GetProductByIdAsync(int id)
         {
-            ProductReadDTO? dto = null;
+            ProductRead? dto = null;
             var product = await _repository.GetProductAsync(id);
             if (product != null)
-                dto = _mapper.Map<ProductReadDTO>(product);
+                dto = _mapper.Map<ProductRead>(product);
             return dto;
         }
 
-        public async Task<bool> UpdateProductAsync(ProductUpdateDTO dto)
+        public async Task<bool> UpdateProductAsync(ProductUpdate dto)
         {
             var product = await _repository.GetProductAsync(dto.Id);
 

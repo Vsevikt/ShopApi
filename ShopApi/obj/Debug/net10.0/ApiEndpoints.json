@@ -54,7 +54,7 @@
   {
     "ContainingType": "ShopApi.Controllers.AuthController",
     "Method": "RegisterUser",
-    "RelativePath": "api/v1/Auth",
+    "RelativePath": "api/v1/Auth/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

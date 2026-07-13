@@ -13,6 +13,7 @@ namespace ShopApplication.Mapping
         {
             CreateMap<UserCreateDTO, User>();
             CreateMap<User, UserReadDTO>();
+            CreateMap<User, UserLoginDTO>();
         }
     }
 }

@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/v1/Auth": {
+    "/api/v1/Auth/register": {
       "post": {
         "tags": [
           "Auth"
@@ -787,8 +787,21 @@
         "type": "integer",
         "format": "int32"
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter JWT token",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
     }
   },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ],
   "tags": [
     {
       "name": "Auth"

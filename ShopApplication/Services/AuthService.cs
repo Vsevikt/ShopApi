@@ -10,9 +10,9 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class AuthService(IMapper _mapper, IAuthRepository _repository, IHashHelper _hashHelper) : IAuthService
+    public class AuthService(IMapper _mapper, IAuthRepository _repository, IHashHelper _hashHelper, IJWTService _jwtService) : IAuthService
     {
-        public async Task<UserReadDTO?> RegisterAsync(UserCreateDTO dto)
+        public async Task<(UserReadDTO? User, string? Token)> RegisterAsync(UserCreateDTO dto)
         {
 
             var isExist = await _repository.IsExistEmailAsync(dto.Email);
@@ -20,9 +20,13 @@ namespace ShopApplication.Services
             {
                 var hash = _hashHelper.Hash(dto.Password);
                 var user = _mapper.Map<User>(dto);
-                return _mapper.Map<UserReadDTO>(await _repository.RegisterUserAsync(user, hash));
+
+                var token = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString());
+                var registerUser = await _repository.RegisterUserAsync(user, hash);
+                if (registerUser != null)
+                    return (_mapper.Map<UserReadDTO>(registerUser), token);
             }
-            return null;
+            return (null, null);
         }
     }
 }

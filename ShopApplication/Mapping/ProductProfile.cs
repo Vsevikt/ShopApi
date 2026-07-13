@@ -11,7 +11,7 @@ namespace ShopApplication.Mapping
     {
         public ProductProfile() 
         {
-            CreateMap<ProductCreateDTO, Product>()
+            CreateMap<ProductCreate, Product>()
                 .ForMember(
                     dest => dest.Images,
                     opt => opt.MapFrom(src =>
@@ -27,7 +27,7 @@ namespace ShopApplication.Mapping
                         src.CategoryId == 0 ? null : src.CategoryId)
                 );
 
-            CreateMap<Product, ProductReadDTO>()
+            CreateMap<Product, ProductRead>()
                 .ForMember(
                     dest => dest.CategoryName,
                     opt => opt.MapFrom(src => src.Category.Name)
@@ -39,7 +39,7 @@ namespace ShopApplication.Mapping
                     )
                 );
 
-            CreateMap<ProductUpdateDTO, Product>();
+            CreateMap<ProductUpdate, Product>();
         }
     }
 }

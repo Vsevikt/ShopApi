@@ -12,58 +12,58 @@ namespace ShopApplication.Services;
 
 public class CategoryService(ICategoryRepository _repository, IMapper _mapper) : ICategoryService
 {
-    public async Task<int?> CreateCategoryAsync(CategoryCreateDTO dto)
+    public async Task<int?> CreateCategoryAsync(CategoryCreate dto)
     {
         var category = _mapper.Map<Category>(dto);
         return await _repository.AddCategoryAsync(category);
     }
 
-    public async Task<ICollection<CategoryReadDTO>> GetAllCategoriesAsync()
+    public async Task<ICollection<CategoryRead>> GetAllCategoriesAsync()
     {
         var categories = await _repository.GetCategoriesAsync();
-        List<CategoryReadDTO> dtos = null;
+        List<CategoryRead> dtos = null;
         if (categories != null && categories.Count > 0)
-            dtos = _mapper.Map<List<CategoryReadDTO>>(categories);
+            dtos = _mapper.Map<List<CategoryRead>>(categories);
         return dtos;
     }
 
-    public async Task<CategoryReadDTO?> GetCategoryByIdAsync(int id)
+    public async Task<CategoryRead?> GetCategoryByIdAsync(int id)
     {
-        CategoryReadDTO? dto = null;
+        CategoryRead? dto = null;
         var category = await _repository.GetCategoryAsync(id);
         if (category != null)
-            dto = _mapper.Map<CategoryReadDTO>(category);
+            dto = _mapper.Map<CategoryRead>(category);
         return dto;
     }
 
-    public async Task<ICollection<CategoryReadDTO>> GetCategoriesByParentAsync()
+    public async Task<ICollection<CategoryRead>> GetCategoriesByParentAsync()
     {
         var categories = await _repository.GetParentCategoriesAsync();
-        List<CategoryReadDTO> dtos = null;
+        List<CategoryRead> dtos = null;
         if (categories != null && categories.Count > 0)
-            dtos = _mapper.Map<List<CategoryReadDTO>>(categories);
+            dtos = _mapper.Map<List<CategoryRead>>(categories);
         return dtos;
     }
 
-    public async Task<ICollection<CategoryReadDTO>> GetCategoriesByChildAsync()
+    public async Task<ICollection<CategoryRead>> GetCategoriesByChildAsync()
     {
         var categories = await _repository.GetChildCategoriesAsync();
-        List<CategoryReadDTO> dtos = null;
+        List<CategoryRead> dtos = null;
         if (categories != null && categories.Count > 0)
-            dtos = _mapper.Map<List<CategoryReadDTO>>(categories);
+            dtos = _mapper.Map<List<CategoryRead>>(categories);
         return dtos;
     }
 
-    public async Task<ICollection<CategoryReadDTO>> GetCategoriesByTreeAsync()
+    public async Task<ICollection<CategoryRead>> GetCategoriesByTreeAsync()
     {
         var categories = await _repository.GetTreeCategoriesAsync();
-        List<CategoryReadDTO> dtos = null;
+        List<CategoryRead> dtos = null;
         if (categories != null && categories.Count > 0)
-            dtos = _mapper.Map<List<CategoryReadDTO>>(categories);
+            dtos = _mapper.Map<List<CategoryRead>>(categories);
         return dtos;
     }
 
-    public async Task<bool> UpdateCategoryAsync(CategoryUpdateDTO dto)
+    public async Task<bool> UpdateCategoryAsync(CategoryUpdate dto)
     {
         var category = await _repository.GetCategoryAsync(dto.Id);
         if (category == null)

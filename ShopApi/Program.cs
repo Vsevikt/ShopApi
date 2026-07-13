@@ -1,5 +1,8 @@
 
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using ShopApi.Services;
 using ShopApplication.Interfaces;
@@ -8,10 +11,13 @@ using ShopApplication.Interfaces.Repository;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Mapping;
 using ShopApplication.Services;
+using ShopInfrastructure.Configuration;
 using ShopInfrastructure.Data;
 using ShopInfrastructure.Helpers;
 using ShopInfrastructure.Repositories;
+using ShopInfrastructure.Services;
 using System.Reflection;
+using System.Text;
 
 namespace ShopApi
 {
@@ -35,8 +41,18 @@ namespace ShopApi
 
             });
 
-            // AutoMapper
+            var configuration = builder.Configuration;
 
+            //JWT Settings
+            var jwtSettings = configuration
+                .GetSection("Jwt")
+                .Get<JwtSettings>()
+                ?? throw new Exception("JWT settings not configured.");
+
+            builder.Services.Configure<JwtSettings>
+                (configuration.GetSection("Jwt"));
+
+            // AutoMapper
             builder.Services.AddAutoMapper(
                 _ => { },
                 typeof(CategoryProfile).Assembly,
@@ -67,31 +83,78 @@ namespace ShopApi
             //    });
             //});
 
+            //builder.Services.AddSwaggerGen(options =>
+            //{
+            //    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            //    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+
+            //    options.IncludeXmlComments(xmlPath);
+            //});
+
+            // Swagger + JWT
             builder.Services.AddSwaggerGen(options =>
             {
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Description = "Enter JWT token"
+                });
 
-                options.IncludeXmlComments(xmlPath);
+                options.AddSecurityRequirement(document => new OpenApiSecurityRequirement
+                {
+                    [new OpenApiSecuritySchemeReference("Bearer", document)] = []
+                });
             });
+
+            //builder.Services.AddSwaggerGen();
+
+            // Authentication
+            builder.Services.AddAuthentication(options =>
+            {            
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })        
+            .AddJwtBearer(options => 
+            {   
+                //Правила перевірки токена
+                options.TokenValidationParameters = new TokenValidationParameters            
+                {                
+                    ValidateIssuer = true,                
+                    ValidateAudience = true,                
+                    ValidateLifetime = true,                
+                    ValidateIssuerSigningKey = true,                
+                    
+                    ValidIssuer = jwtSettings.Issuer,                
+                    ValidAudience = jwtSettings.Audience,                
+                    IssuerSigningKey = new SymmetricSecurityKey(                    
+                        Encoding.UTF8.GetBytes(jwtSettings.Key)                
+                    ),                
+                    
+                    ClockSkew = TimeSpan.Zero            
+                };        
+            });        
+            
+            builder.Services.AddAuthorization();
 
             builder.Services.AddControllers();
 
             // SERVICES
-
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IImageService, ImageService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IJWTService, JWTService>();
 
             // REPOSITORIES
-
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 
             // HELPERS
-
             builder.Services.AddSingleton<IHashHelper, HashHelper>();
 
             //----
@@ -112,9 +175,13 @@ namespace ShopApi
             }
             //app.ProductsEndpoints();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.MapControllers();
             app.UseStaticFiles();
             //app.UseMiddleware<UserCheckMiddleware>();
+
 
             app.Run();
         }
