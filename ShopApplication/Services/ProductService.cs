@@ -66,7 +66,7 @@ namespace ShopApplication.Services
                 product.Images = dto.ImageUrls
                     .Select((url, index) => new ProductImage
                     {
-                        Url = url,
+                        Url = string.IsNullOrEmpty(url) ? "default-image.png" : url,
                         ProductId = product.Id,
                         IsPrimary = index == 0
                     })

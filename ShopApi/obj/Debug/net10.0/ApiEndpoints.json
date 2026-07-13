@@ -52,6 +52,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ShopApi.Controllers.AuthController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/v1/Auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ShopApplication.DTOs.UserDTOs.UserCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ShopApi.Controllers.CategoryController",
     "Method": "CreateCategory",
     "RelativePath": "api/v1/Category",

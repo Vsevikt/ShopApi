@@ -15,6 +15,8 @@ namespace ShopInfrastructure.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<User> Users { get; set; }
+
 
         //// Автоматично встановлює CreatedAt і UpdatedAt перед збереженням
         public override int SaveChanges()
@@ -50,6 +52,11 @@ namespace ShopInfrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasIndex(u => u.Email).IsUnique();
+            });
+
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.HasIndex(c => c.Slug).IsUnique();

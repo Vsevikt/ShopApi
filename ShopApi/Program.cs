@@ -3,11 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 using ShopApi.Services;
 using ShopApplication.Interfaces;
+using ShopApplication.Interfaces.Helpers;
 using ShopApplication.Interfaces.Repository;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Mapping;
 using ShopApplication.Services;
 using ShopInfrastructure.Data;
+using ShopInfrastructure.Helpers;
 using ShopInfrastructure.Repositories;
 using System.Reflection;
 
@@ -37,7 +39,8 @@ namespace ShopApi
 
             builder.Services.AddAutoMapper(
                 _ => { },
-                typeof(CategoryProfile).Assembly
+                typeof(CategoryProfile).Assembly,
+                typeof(UserProfile).Assembly
             );
 
             // CORS 
@@ -78,12 +81,18 @@ namespace ShopApi
 
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IImageService, ImageService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
 
             // REPOSITORIES
 
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-            builder.Services.AddScoped<IImageService, ImageService>();
+            builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+
+            // HELPERS
+
+            builder.Services.AddSingleton<IHashHelper, HashHelper>();
 
             //----
 

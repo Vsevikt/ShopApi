@@ -29,6 +29,7 @@ wwwroot\categories\f2bdb70b-1fd3-47c8-9045-1f651f389723.jpg
 wwwroot\categories\fe706c7f-05cf-48b7-8b38-31164d0792be.jpg
 wwwroot\images\beauty.jpg
 wwwroot\images\default-avatar.png
+wwwroot\images\default-image.png
 wwwroot\images\electronics.jpg
 wwwroot\images\fashion.jpg
 wwwroot\images\home.jpg
@@ -39,6 +40,7 @@ wwwroot\products\23d42bc1-3b84-4b6f-8ab9-b98ab9f8e46d.jpg
 wwwroot\products\2496aa97-1c57-4b8b-8d5c-86954e25e0f3.jpg
 wwwroot\products\294d0617-34d0-4a7e-8fb5-9b1bc78c74ca.jpg
 wwwroot\products\2e0325f2-f889-49d7-8026-ecf792e3d22d.jpg
+wwwroot\products\30fe6f37-8408-4f1e-a28f-90fc877ea548.jpg
 wwwroot\products\383e49a8-3e2e-47bf-b632-5d534e003ce0.jpg
 wwwroot\products\3d3ebd99-853e-4d04-a0ae-66b383c64855.jpg
 wwwroot\products\47ac9392-48c2-4817-9384-07d5a070cbf5.jpg

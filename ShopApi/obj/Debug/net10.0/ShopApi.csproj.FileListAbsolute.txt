@@ -170,3 +170,5 @@ G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.pdb
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.genruntimeconfig.cache
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ref\ShopApi.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\AutoMapper.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\BCrypt-Net-Next.dll
+G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.MvcApplicationPartsAssemblyInfo.cs
