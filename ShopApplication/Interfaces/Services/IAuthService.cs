@@ -11,5 +11,7 @@ namespace ShopApplication.Interfaces.Services
         Task<(UserReadDTO? User, string? Token, string? RefreshToken)> RegisterAsync(UserCreateDTO dto);
         Task<(UserReadDTO? User, string? Token, string? RefreshToken)> LoginAsync(string email, string password);
         Task<(UserReadDTO? User, string? Token, string? RefreshToken)> RefreshTokenAsync(string refreshToken);
+        Task<(UserReadDTO? User, string? Token, string? RefreshToken)> UpdateUserAsync(UserUpdateDTO dto);
+        Task<bool> CheckEmailAsync(string email);
     }
 }

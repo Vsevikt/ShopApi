@@ -18,6 +18,11 @@ namespace ShopDomain.Models
         [Column("email")]
         public string Email { get; set; } = string.Empty;
 
+        [MaxLength(20)]
+        //[RegularExpression(@"^\+?[0-9\s\-()]{10,20}$")]
+        [Column("phone_number")]
+        public string PhoneNumber { get; set; } = string.Empty;
+
         [Required]
         [Column("password_hash")]
         public string PasswordHash { get; set; } = string.Empty;

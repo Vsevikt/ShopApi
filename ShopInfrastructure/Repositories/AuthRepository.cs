@@ -35,5 +35,12 @@ namespace ShopInfrastructure.Repositories
         {
             return await _context.Users.FirstOrDefaultAsync(user => user.Id == id);
         }
+
+        public async Task<User>? UpdateUserAsync(User user)
+        {
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return await _context.Users.FirstOrDefaultAsync(us => us.Id == user.Id);
+        }
     }
 }

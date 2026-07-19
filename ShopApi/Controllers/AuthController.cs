@@ -78,5 +78,26 @@ namespace ShopApi.Controllers
 
             return Ok(new { user = user.User }); // token = user.Token // refresh = user.RefreshToken
         }
+
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateUser([FromBody] UserUpdateDTO dto)
+        {
+            var user = await _authService.UpdateUserAsync(dto);
+            if (user.User == null || user.Token == null)
+                return BadRequest("Не вдалося оновити користувача");
+
+            Response.Cookies.Append(
+                "refreshToken",
+                user.RefreshToken,
+                new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    //Expires = result.RefreshTokenExpires
+                });
+
+            return Ok(new { user = user.User }); // token = user.Token // refresh = user.RefreshToken
+        }
     }
 }

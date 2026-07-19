@@ -10,6 +10,7 @@ namespace ShopApplication.DTOs.UserDTOs
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Email { get; set; } = string.Empty;
         public UserRole Role { get; set; } = UserRole.User;
+        public string PhoneNumber { get; set; } = string.Empty;
 
     }
 }

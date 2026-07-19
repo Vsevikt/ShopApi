@@ -11,6 +11,6 @@ namespace ShopApplication.Interfaces.Repository
         Task<bool> IsExistEmailAsync(string email);
         Task<User>? GetUserByEmailAsync(string email);
         Task<User>? GetUserByIdAsync(Guid id);
-
+        Task<User>? UpdateUserAsync(User user);
     }
 }

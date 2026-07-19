@@ -26,7 +26,7 @@ namespace ShopApplication.Services
                     var token = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString());
                     var refreshToken = _jwtService.GenerateRefreshToken();
 
-                    _refreshTokenRepository.AddTokenAsync(new RefreshToken
+                    await _refreshTokenRepository.AddTokenAsync(new RefreshToken
                     {
                         Token = refreshToken.Item1,
                         UserId = user.Id,
@@ -52,7 +52,7 @@ namespace ShopApplication.Services
                     var token = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString());
                     var refreshToken = _jwtService.GenerateRefreshToken();
 
-                    _refreshTokenRepository.AddTokenAsync(new RefreshToken
+                    await _refreshTokenRepository.AddTokenAsync(new RefreshToken
                     {
                         Token = refreshToken.Item1,
                         UserId = user.Id,
@@ -67,8 +67,8 @@ namespace ShopApplication.Services
             return (null, null, null);
         }
 
-       public async Task<(UserReadDTO? User, string? Token, string? RefreshToken)> RefreshTokenAsync(string refreshToken)
-       {
+        public async Task<(UserReadDTO? User, string? Token, string? RefreshToken)> RefreshTokenAsync(string refreshToken)
+        {
             var token = await _refreshTokenRepository.GetTokenAsync(refreshToken);
             if (token != null && !token.IsRevoked && token.ExpiresAt > DateTime.UtcNow)
             {
@@ -93,6 +93,37 @@ namespace ShopApplication.Services
                 }
             }
             return (null, null, null);
+        }
+
+        public async Task<(UserReadDTO? User, string? Token, string? RefreshToken)> UpdateUserAsync(UserUpdateDTO dto)
+        {
+            var user = await _repository.GetUserByIdAsync(dto.Id);
+            if (user != null)
+            {
+                _mapper.Map(dto, user);
+                var updatedUser = await _repository.UpdateUserAsync(user);
+                if (updatedUser != null)
+                {
+                    var newToken = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(updatedUser), updatedUser.Role.ToString());
+                    var refreshToken = _jwtService.GenerateRefreshToken();
+
+                    await _refreshTokenRepository.AddTokenAsync(new RefreshToken
+                    {
+                        Token = refreshToken.Item1,
+                        UserId = updatedUser.Id,
+                        IsRevoked = false,
+                        CreatedAt = DateTime.UtcNow,
+                        ExpiresAt = DateTime.UtcNow.AddDays(refreshToken.Item2)
+                    });
+                    return (_mapper.Map<UserReadDTO>(updatedUser), newToken, refreshToken.Item1);
+                }
+            }
+            return (null, null, null);
+        }
+
+        public async Task<bool> CheckEmailAsync(string email)
+        {
+            return await _repository.IsExistEmailAsync(email);
         }
     }
 }

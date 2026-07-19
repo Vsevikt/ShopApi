@@ -15,5 +15,6 @@ namespace ShopApplication.DTOs.UserDTOs
         public string Email { get; set; } = null!; 
 
         [Required] 
-        public string Password { get; set; } = null!; }
+        public string Password { get; set; } = null!; 
+    }
 }
