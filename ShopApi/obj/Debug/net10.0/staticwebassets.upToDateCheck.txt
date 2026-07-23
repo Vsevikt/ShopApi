@@ -35,10 +35,12 @@ wwwroot\images\electronics.jpg
 wwwroot\images\fashion.jpg
 wwwroot\images\home.jpg
 wwwroot\products\07011048-1865-476f-a979-71afd78fb428.jpg
+wwwroot\products\09a19993-d3da-4bfd-8e24-c50185275977.jpeg
 wwwroot\products\19085f27-d5e2-481e-9123-78a6a669314b.jpg
 wwwroot\products\1b88b74f-5392-4b39-a1a2-e7a6f424841e.jpg
 wwwroot\products\23d42bc1-3b84-4b6f-8ab9-b98ab9f8e46d.jpg
 wwwroot\products\2496aa97-1c57-4b8b-8d5c-86954e25e0f3.jpg
+wwwroot\products\264c6d88-6862-4b61-99cb-d3b6f9ccdfc8.jpeg
 wwwroot\products\294d0617-34d0-4a7e-8fb5-9b1bc78c74ca.jpg
 wwwroot\products\2e0325f2-f889-49d7-8026-ecf792e3d22d.jpg
 wwwroot\products\30fe6f37-8408-4f1e-a28f-90fc877ea548.jpg
@@ -69,6 +71,7 @@ wwwroot\products\c9fd5d05-15ae-4e05-b638-dd489cfa75be.jpg
 wwwroot\products\dd0a4747-b771-4757-9385-2e3ed22a6022.jpg
 wwwroot\products\dd3e8cc3-92c6-4b99-bc1e-5e07f6f507c1.jpg
 wwwroot\products\e70ca46e-40ec-4e36-bb89-bb9521ffbce9.jpg
+wwwroot\products\e994b15d-226f-4768-b8d8-2add5f74ac99.jpeg
 wwwroot\products\efec2af6-ad9c-469f-b558-43872c8f7ffb.jpg
 wwwroot\products\f6311e71-7c7c-4ba3-84ca-71cbfd6bd9b4.jpg
 wwwroot\products\fb5b6abe-b1ac-4bc6-af06-ad81d493656c.jpg

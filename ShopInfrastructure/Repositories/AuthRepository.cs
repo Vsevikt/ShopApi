@@ -34,7 +34,7 @@ namespace ShopInfrastructure.Repositories
         public async Task<User?> GetUserByIdAsync(Guid id)
         {
             return await _context.Users.FirstOrDefaultAsync(user => user.Id == id);
-        }
+        }   
 
         public async Task<User>? UpdateUserAsync(User user)
         {
