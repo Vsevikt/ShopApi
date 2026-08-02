@@ -14,5 +14,6 @@ namespace ShopApplication.Interfaces.Services
         Task<ProductReadDTO?> GetProductByIdAsync(int id);
         Task<bool> UpdateProductAsync(ProductUpdateDTO dto);
         Task<int?> DeleteProductAsync(int id);
+        Task<ICollection<ProductReadDTO>> SearchProductAsync(string name);
     }
 }

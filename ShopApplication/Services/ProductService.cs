@@ -80,5 +80,11 @@ namespace ShopApplication.Services
         {
             return await _repository.RemoveProductAsync(id);
         }
+
+        public async Task<ICollection<ProductReadDTO>> SearchProductAsync(string name)
+        {
+            var products = await _repository.SearchProductByNameAsync(name);
+            return _mapper.Map<List<ProductReadDTO>>(products);
+        }
     }
 }

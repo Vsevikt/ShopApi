@@ -13,5 +13,6 @@ namespace ShopApplication.Interfaces.Repository
         Task<bool> EditProductAsync(Product product);
         Task<int?> RemoveProductAsync(int id);
         void RemoveImages(ICollection<ProductImage> images);
+        Task<ICollection<Product>> SearchProductByNameAsync(string name);
     }
 }

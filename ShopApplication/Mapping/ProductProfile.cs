@@ -39,6 +39,7 @@ namespace ShopApplication.Mapping
                     )
                 );
 
+
             CreateMap<ProductUpdateDTO, Product>();
         }
     }

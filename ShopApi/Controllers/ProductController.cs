@@ -122,5 +122,14 @@ namespace ShopApi.Controllers
 
             return Ok($"Product deleted {product}");
         }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchProduct([FromQuery] string name)
+        {
+            var products = await _productService.SearchProductAsync(name);
+            if (products == null)
+                return NotFound("Product not found");
+            return Ok(products);
+        }
     }
 }

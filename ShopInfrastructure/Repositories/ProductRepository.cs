@@ -58,5 +58,15 @@ namespace ShopInfrastructure.Repositories
         {
             _context.ProductImages.RemoveRange(images);
         }
+
+        public async Task<ICollection<Product>> SearchProductByNameAsync(string name)
+        {
+            var products = await _context.Products
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .Where(p => p.Name.Contains(name))
+                .ToListAsync();
+            return products;
+        }
     }
 }
