@@ -2,6 +2,7 @@ wwwroot\categories\03a6cd16-fe2b-4f44-b25a-ccc976b0fb46.jpg
 wwwroot\categories\156b1eb0-59fd-4611-aa08-f8159f448e50.jpg
 wwwroot\categories\166f0a10-a131-4427-bd03-79f3d97cae6e.jpg
 wwwroot\categories\1eb593a8-4fb7-4972-b7c9-e84ecda1677f.jpg
+wwwroot\categories\29e8bff0-0356-492a-b684-2c6eb1dc6614.png
 wwwroot\categories\2b0f79a0-2744-488d-ac47-9dbd55154152.jpg
 wwwroot\categories\32861ab4-8f85-48b2-9be8-2f917088bb79.jpg
 wwwroot\categories\3be25239-f55b-4fe5-ac0c-e4b105f83db7.jpg

@@ -10,7 +10,7 @@ using System.Text;
 
 namespace ShopApplication.Services;
 
-public class CategoryService(ICategoryRepository _repository, IMapper _mapper) : ICategoryService
+public class CategoryService(ICategoryRepository _repository, IMapper _mapper, ICachingService _cacheService) : ICategoryService
 {
     public async Task<int?> CreateCategoryAsync(CategoryCreateDTO dto)
     {
@@ -20,11 +20,15 @@ public class CategoryService(ICategoryRepository _repository, IMapper _mapper) :
 
     public async Task<ICollection<CategoryReadDTO>> GetAllCategoriesAsync()
     {
-        var categories = await _repository.GetCategoriesAsync();
-        List<CategoryReadDTO> dtos = null;
-        if (categories != null && categories.Count > 0)
-            dtos = _mapper.Map<List<CategoryReadDTO>>(categories);
-        return dtos;
+        var cache = await _cacheService.GetAsync<ICollection<CategoryReadDTO>>("Categories");
+        if (cache == null)
+        {
+            var authors = await _repository.GetCategoriesAsync();
+            cache = _mapper.Map<ICollection<CategoryReadDTO>>(authors);
+            await _cacheService.SetAsync("Categories", cache, TimeSpan.FromMinutes(5));
+           
+        }
+        return cache;
     }
 
     public async Task<CategoryReadDTO?> GetCategoryByIdAsync(int id)

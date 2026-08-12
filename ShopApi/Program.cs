@@ -59,16 +59,28 @@ namespace ShopApi
                 typeof(UserProfile).Assembly
             );
 
-            // CORS 
+            //// CORS 
+            //builder.Services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowAll", policy =>
+            //    {
+            //        policy.AllowAnyOrigin()
+            //              .AllowAnyMethod()
+            //              .AllowAnyHeader();
+            //    });
+            //});
+
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowAll", policy =>
+                options.AddPolicy("ProductionPolicy", policy =>
                 {
-                    policy.AllowAnyOrigin()
-                          .AllowAnyMethod()
-                          .AllowAnyHeader();
+                    policy.WithOrigins("https://example.com", "https://www.example.com")
+                          .WithMethods("GET", "POST", "PUT", "DELETE")
+                          .WithHeaders("Content-Type", "Authorization");
                 });
             });
+
+            builder.Services.AddMemoryCache();
 
 
             builder.Services.AddEndpointsApiExplorer();
@@ -149,6 +161,7 @@ namespace ShopApi
             builder.Services.AddScoped<IImageService, ImageService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IJWTService, JWTService>();
+            builder.Services.AddScoped<ICachingService, MemoryCachingService>();
 
             // REPOSITORIES
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -168,6 +181,7 @@ namespace ShopApi
             app.UseSwaggerUI();
 
             app.UseCors("AllowAll");
+            app.UseCors("ProductionPolicy");
 
             if (app.Environment.IsDevelopment())
             {
