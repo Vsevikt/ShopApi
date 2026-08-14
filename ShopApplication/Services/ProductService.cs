@@ -14,7 +14,7 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class ProductService(IProductRepository _repository, IImageService _imageService, IMapper _mapper) : IProductService
+    public class ProductService(IProductRepository _repository, IImageService _imageService, IMapper _mapper, ICachingService _cacheService) : IProductService
     {
         public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
         {
@@ -24,20 +24,33 @@ namespace ShopApplication.Services
 
         public async Task<ICollection<ProductReadDTO>> GetAllProductsAsync()
         {
-            var products = await _repository.GetProductsAsync();
-            List<ProductReadDTO> dtos = null;
-            if (products != null && products.Count > 0)
-                dtos = _mapper.Map<List<ProductReadDTO>>(products);
-            return dtos;
+            var cache = await _cacheService.GetAsync<ICollection<ProductReadDTO>>("Products");
+            if (cache == null)
+            {
+                var products = await _repository.GetProductsAsync();
+                cache = _mapper.Map<ICollection<ProductReadDTO>>(products);
+                await _cacheService.SetAsync("Products", cache, TimeSpan.FromMinutes(5));
+            }
+
+            return cache;
         }
 
         public async Task<ProductReadDTO?> GetProductByIdAsync(int id)
         {
-            ProductReadDTO? dto = null;
-            var product = await _repository.GetProductAsync(id);
-            if (product != null)
-                dto = _mapper.Map<ProductReadDTO>(product);
-            return dto;
+            var cache = await _cacheService.GetAsync<ProductReadDTO>($"Product:{id}");
+
+            if (cache == null)
+            {
+                var product = await _repository.GetProductAsync(id);
+
+                if (product == null)
+                    return null;
+
+                cache = _mapper.Map<ProductReadDTO>(product);
+                await _cacheService.SetAsync($"Product:{id}", cache, TimeSpan.FromMinutes(5));
+            }
+
+            return cache;
         }
 
         public async Task<bool> UpdateProductAsync(ProductUpdateDTO dto)

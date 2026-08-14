@@ -23,8 +23,8 @@ public class CategoryService(ICategoryRepository _repository, IMapper _mapper, I
         var cache = await _cacheService.GetAsync<ICollection<CategoryReadDTO>>("Categories");
         if (cache == null)
         {
-            var authors = await _repository.GetCategoriesAsync();
-            cache = _mapper.Map<ICollection<CategoryReadDTO>>(authors);
+            var categories = await _repository.GetCategoriesAsync();
+            cache = _mapper.Map<ICollection<CategoryReadDTO>>(categories);
             await _cacheService.SetAsync("Categories", cache, TimeSpan.FromMinutes(5));
            
         }
