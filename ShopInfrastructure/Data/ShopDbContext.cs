@@ -2,9 +2,8 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using ShopDomain.Models;
 using System;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ShopInfrastructure.Data
 {
@@ -18,9 +17,9 @@ namespace ShopInfrastructure.Data
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
 
-
-        //// Автоматично встановлює CreatedAt і UpdatedAt перед збереженням
+        // Автоматично встановлює CreatedAt і UpdatedAt перед збереженням
         public override int SaveChanges()
         {
             SetTimestamps();
@@ -54,9 +53,12 @@ namespace ShopInfrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.HasIndex(u => u.Email).IsUnique();
+                entity.Property(u => u.Role).HasConversion<string>();
             });
 
             modelBuilder.Entity<Category>(entity =>
@@ -72,20 +74,20 @@ namespace ShopInfrastructure.Data
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.Property(p => p.Price)
-                      .HasColumnType("decimal(18,2)");
+                      .HasColumnType("numeric(18,2)");
 
                 entity.HasOne(p => p.Category)
                       .WithMany(c => c.Products)
                       .HasForeignKey(p => p.CategoryId)
                       .OnDelete(DeleteBehavior.Restrict);
+            });
 
-                modelBuilder.Entity<ProductImage>(entity =>
-                {
-                    entity.HasOne(i => i.Product)
-                          .WithMany(p => p.Images)
-                          .HasForeignKey(i => i.ProductId)
-                          .OnDelete(DeleteBehavior.Cascade);
-                });
+            modelBuilder.Entity<ProductImage>(entity =>
+            {
+                entity.HasOne(i => i.Product)
+                      .WithMany(p => p.Images)
+                      .HasForeignKey(i => i.ProductId)
+                      .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<RefreshToken>(entity =>
@@ -96,17 +98,13 @@ namespace ShopInfrastructure.Data
                       .OnDelete(DeleteBehavior.Cascade);
             });
 
-            //modelBuilder.Entity<Cart>()
-            //   .HasOne(x => x.User)
-            //   .WithMany()
-            //   .HasForeignKey(x => x.UserId)
-            //   .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Cart>()
-                .HasOne(x => x.Product)
-                .WithMany()
-                .HasForeignKey(x => x.ProductId)
-                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Cart>(entity =>
+            {
+                entity.HasOne(x => x.Product)
+                      .WithMany()
+                      .HasForeignKey(x => x.ProductId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
         }
     }
 }

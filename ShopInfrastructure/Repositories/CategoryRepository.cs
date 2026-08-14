@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using ShopApplication.Interfaces.Repository;
+using ShopApplication.Interfaces.Repositories;
 using ShopDomain.Models;
 using ShopInfrastructure.Data;
 

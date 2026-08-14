@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using ShopApplication.DTOs.UserDTOs;
 using ShopApplication.Interfaces.Helpers;
-using ShopApplication.Interfaces.Repository;
+using ShopApplication.Interfaces.Repositories;
 using ShopApplication.Interfaces.Services;
+using ShopDomain.Enums;
 using ShopDomain.Models;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class AuthService(IMapper _mapper, IAuthRepository _repository, IHashHelper _hashHelper, IJWTService _jwtService, IRefreshTokenRepository _refreshTokenRepository) : IAuthService
+    public class AuthService(IMapper _mapper, IAuthRepository _repository, IHashHelper _hashHelper, IJWTService _jwtService, IRefreshTokenRepository _refreshTokenRepository, IPasswordResetTokenRepository _passwordResetTokenRepository, IEmailService _emailService) : IAuthService
     {
         public async Task<(UserReadDTO? User, string? Token, string? RefreshToken)> RegisterAsync(UserCreateDTO dto)
         {
@@ -124,6 +125,70 @@ namespace ShopApplication.Services
         public async Task<bool> CheckEmailAsync(string email)
         {
             return await _repository.IsExistEmailAsync(email);
+        }
+
+        public async Task<bool> ForgotPasswordAsync(string email)
+        {
+            var user = await _repository.GetUserByEmailAsync(email);
+
+            if (user == null)
+                return false;
+
+            var token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+
+            var resetToken = new PasswordResetToken
+            {
+                Token = token,
+                UserId = user.Id,
+                ExpiresAt = DateTime.UtcNow.AddMinutes(30),
+                IsUsed = false,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            await _passwordResetTokenRepository.AddAsync(resetToken);
+
+            await _emailService.SendPasswordResetEmailAsync(user.Email, token);
+
+            return true;
+        }
+
+        public async Task<bool> ResetPasswordAsync(string token, string newPassword)
+        {
+            var resetToken = await _passwordResetTokenRepository.GetByTokenAsync(token);
+
+            if (resetToken == null)
+                return false;
+
+            if (resetToken.IsUsed)
+                return false;
+
+            if (resetToken.ExpiresAt < DateTime.UtcNow)
+                return false;
+
+            if (resetToken.User == null)
+                return false;
+
+            resetToken.User.PasswordHash = _hashHelper.Hash(newPassword);
+
+            resetToken.IsUsed = true;
+
+            await _passwordResetTokenRepository.UpdateAsync(resetToken);
+
+            return true;
+        }
+
+        public async Task<bool> ChangeRoleAsync(Guid userId, UserRole role)
+        {
+            var user = await _repository.GetUserByIdAsync(userId);
+
+            if (user == null)
+                return false;
+
+            user.Role = role;
+
+            await _repository.UpdateUserAsync(user);
+
+            return true;
         }
     }
 }

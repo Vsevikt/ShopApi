@@ -5,7 +5,7 @@ using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
 using ShopApplication.Interfaces;
-using ShopApplication.Interfaces.Repository;
+using ShopApplication.Interfaces.Repositories;
 using ShopApplication.Interfaces.Services;
 using ShopDomain.Models;
 using System;

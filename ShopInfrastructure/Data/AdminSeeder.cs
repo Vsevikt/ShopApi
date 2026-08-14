@@ -1,54 +1,45 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Text;
-//using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using ShopApplication.Interfaces.Helpers;
+using ShopDomain.Enums;
+using ShopDomain.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-//namespace ShopInfrastructure.Data
-//{
-//    public static class AdminSeeder
-//    {
-//        public static async Task SeedAsync(
-//            UserManager<ApplicationUser> userManager,
-//            RoleManager<IdentityRole> roleManager)
-//        {
-//            const string adminRole = "Admin";
+namespace ShopInfrastructure.Data
+{
+    public static class AdminSeeder
+    {
+        public static async Task SeedAsync(IServiceProvider serviceProvider)
+        {
+            var context = serviceProvider.GetRequiredService<ShopDbContext>();
+            var hashHelper = serviceProvider.GetRequiredService<IHashHelper>();
+            var config = serviceProvider.GetRequiredService<IConfiguration>();
 
-//            // Створюємо роль Admin, якщо її ще немає
-//            if (!await roleManager.RoleExistsAsync(adminRole))
-//            {
-//                await roleManager.CreateAsync(
-//                    new IdentityRole(adminRole));
-//            }
+            if ((await context.Database.GetPendingMigrationsAsync()).Any())
+            {
+                await context.Database.MigrateAsync();
+            }
 
-//            // Перевіряємо, чи існує хоча б один Admin
-//            var admins = await userManager.GetUsersInRoleAsync(adminRole);
+            bool adminExists = await context.Users.AnyAsync(u => u.Role == UserRole.Admin);
 
-//            if (admins.Count > 0)
-//            {
-//                return;
-//            }
+            if (!adminExists)
+            {
+                string adminEmail = config["SuperAdmin:Email"] ?? "admin@system.com";
+                string adminPassword = config["SuperAdmin:Password"] ?? "Admin123!";
 
-//            // Створюємо першого Admin
-//            var admin = new ApplicationUser
-//            {
-//                UserName = "admin",
-//                Email = "admin@example.com",
-//                EmailConfirmed = true
-//            };
+                var adminUser = new User
+                {
+                    Email = adminEmail,
+                    PasswordHash = hashHelper.Hash(adminPassword),
+                    Role = UserRole.Admin
+                };
 
-//            var result = await userManager.CreateAsync(
-//                admin,
-//                "AdminPassword123!");
-
-//            if (!result.Succeeded)
-//            {
-//                throw new Exception(
-//                    "Не вдалося створити першого адміністратора.");
-//            }
-
-//            await userManager.AddToRoleAsync(
-//                admin,
-//                adminRole);
-//        }
-//    }
-//}
+                await context.Users.AddAsync(adminUser);
+                await context.SaveChangesAsync();
+            }
+        }
+    }
+}

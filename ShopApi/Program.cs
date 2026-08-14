@@ -1,13 +1,11 @@
-
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using ShopApi.Services;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Helpers;
-using ShopApplication.Interfaces.Repository;
+using ShopApplication.Interfaces.Repositories;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Mapping;
 using ShopApplication.Services;
@@ -16,32 +14,35 @@ using ShopInfrastructure.Data;
 using ShopInfrastructure.Helpers;
 using ShopInfrastructure.Repositories;
 using ShopInfrastructure.Services;
-using System.Reflection;
 using System.Text;
 
 namespace ShopApi
 {
-    /*public static class MiddlewareExtensions
-    {
-        public static IApplicationBuilder UseRequestTimer(this IApplicationBuilder builder)
-        {
-            return builder.UseMiddleware<RequestTimerMiddleware>();
-        }
-    }*/
-
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddDbContext<ShopDbContext>(options =>
             {
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
-
             });
 
             var configuration = builder.Configuration;
+
+            //// 2. JWT Settings Configuration
+            //var jwtSection = configuration.GetSection("Jwt");
+            //var jwtSettings = jwtSection.Get<JwtSettings>()
+            //    ?? throw new InvalidOperationException("JWT settings ('Jwt' section) are not configured in appsettings.json.");
+
+            //// Перевірка довжини ключа під HS256
+            //if (string.IsNullOrWhiteSpace(jwtSettings.Key) || Encoding.UTF8.GetBytes(jwtSettings.Key).Length < 32)
+            //{
+            //    throw new InvalidOperationException("Jwt:Key in appsettings.json must be at least 32 characters long (256 bits).");
+            //}
+
+            //builder.Services.Configure<JwtSettings>(jwtSection);
 
             //JWT Settings
             var jwtSettings = configuration
@@ -59,19 +60,16 @@ namespace ShopApi
                 typeof(UserProfile).Assembly
             );
 
-            //// CORS 
-            //builder.Services.AddCors(options =>
-            //{
-            //    options.AddPolicy("AllowAll", policy =>
-            //    {
-            //        policy.AllowAnyOrigin()
-            //              .AllowAnyMethod()
-            //              .AllowAnyHeader();
-            //    });
-            //});
-
+            // CORS
             builder.Services.AddCors(options =>
             {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+
                 options.AddPolicy("ProductionPolicy", policy =>
                 {
                     policy.WithOrigins("https://example.com", "https://www.example.com")
@@ -81,29 +79,9 @@ namespace ShopApi
             });
 
             builder.Services.AddMemoryCache();
-
-
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
 
-            //builder.Services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo
-            //    {
-            //        Title = "Shop Api",
-            //        Version = "v1"
-            //    });
-            //});
-
-            //builder.Services.AddSwaggerGen(options =>
-            //{
-            //    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-            //    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-
-            //    options.IncludeXmlComments(xmlPath);
-            //});
-
-            // Swagger + JWT
+            // 5. Swagger + JWT
             builder.Services.AddSwaggerGen(options =>
             {
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -126,32 +104,30 @@ namespace ShopApi
 
             // Authentication
             builder.Services.AddAuthentication(options =>
-            {            
+            {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })        
-            .AddJwtBearer(options => 
-            {   
-                //Правила перевірки токена
-                options.TokenValidationParameters = new TokenValidationParameters            
-                {                
-                    ValidateIssuer = true,                
-                    ValidateAudience = true,                
-                    ValidateLifetime = true,                
-                    ValidateIssuerSigningKey = true,                
-                    
-                    ValidIssuer = jwtSettings.Issuer,                
-                    ValidAudience = jwtSettings.Audience,                
-                    IssuerSigningKey = new SymmetricSecurityKey(                    
-                        Encoding.UTF8.GetBytes(jwtSettings.Key)                
-                    ),                
-                    
-                    ClockSkew = TimeSpan.Zero            
-                };        
-            });        
-            
-            builder.Services.AddAuthorization();
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
 
+                    ValidIssuer = jwtSettings.Issuer,
+                    ValidAudience = jwtSettings.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(jwtSettings.Key)
+                    ),
+
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+
+            builder.Services.AddAuthorization();
             builder.Services.AddControllers();
 
             // SERVICES
@@ -162,6 +138,7 @@ namespace ShopApi
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IJWTService, JWTService>();
             builder.Services.AddScoped<ICachingService, MemoryCachingService>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             // REPOSITORIES
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -169,11 +146,10 @@ namespace ShopApi
             builder.Services.AddScoped<ICartRepository, CartRepository>();
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
             builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+            builder.Services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
 
             // HELPERS
             builder.Services.AddSingleton<IHashHelper, HashHelper>();
-
-            //----
 
             var app = builder.Build();
 
@@ -183,6 +159,21 @@ namespace ShopApi
             app.UseCors("AllowAll");
             app.UseCors("ProductionPolicy");
 
+            // Database Seeding
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    await AdminSeeder.SeedAsync(services);
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "Помилка під час ініціалізації бази даних або створення першого адміна.");
+                }
+            }
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -191,16 +182,12 @@ namespace ShopApi
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShopApi v1");
                 });
             }
-            //app.ProductsEndpoints();
 
             app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();
             app.UseStaticFiles();
-            //app.UseMiddleware<UserCheckMiddleware>();
-
-
             app.Run();
         }
     }

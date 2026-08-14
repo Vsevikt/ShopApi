@@ -7,32 +7,28 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ShopInfrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Cart : Migration
+    public partial class Second : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "carts",
+                name: "password_reset_tokens",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    token = table.Column<string>(type: "text", nullable: false),
                     user_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    product_id = table.Column<int>(type: "integer", nullable: false),
-                    quantity = table.Column<int>(type: "integer", nullable: false)
+                    expires_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    is_used = table.Column<bool>(type: "boolean", nullable: false),
+                    created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_carts", x => x.id);
+                    table.PrimaryKey("PK_password_reset_tokens", x => x.id);
                     table.ForeignKey(
-                        name: "FK_carts_products_product_id",
-                        column: x => x.product_id,
-                        principalTable: "products",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_carts_users_user_id",
+                        name: "FK_password_reset_tokens_users_user_id",
                         column: x => x.user_id,
                         principalTable: "users",
                         principalColumn: "id",
@@ -40,13 +36,8 @@ namespace ShopInfrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_carts_product_id",
-                table: "carts",
-                column: "product_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_carts_user_id",
-                table: "carts",
+                name: "IX_password_reset_tokens_user_id",
+                table: "password_reset_tokens",
                 column: "user_id");
         }
 
@@ -54,7 +45,7 @@ namespace ShopInfrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "carts");
+                name: "password_reset_tokens");
         }
     }
 }

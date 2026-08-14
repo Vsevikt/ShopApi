@@ -23,17 +23,21 @@ namespace ShopInfrastructure.Services
         {
             var key = Encoding.UTF8.GetBytes(_jwtSettings.Key);
             var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Email, userLoginDto.Email),
-            new Claim(ClaimTypes.Role, role),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-        };
+            {
+                new Claim(ClaimTypes.NameIdentifier, userLoginDto.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, userLoginDto.Email),
+                new Claim(ClaimTypes.Email, userLoginDto.Email),
+                new Claim(ClaimTypes.Role, role),
+                new Claim("role", role),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
             var signingKey = new SymmetricSecurityKey(key);
             var credentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
             var token = new JwtSecurityToken(
                 issuer: _jwtSettings.Issuer,
                 audience: _jwtSettings.Audience,
                 claims: claims,
+                notBefore: DateTime.UtcNow,
                 expires: DateTime.UtcNow.AddMinutes(_jwtSettings.ExpiresMinutes),
                 signingCredentials: credentials);
             return new JwtSecurityTokenHandler().WriteToken(token);

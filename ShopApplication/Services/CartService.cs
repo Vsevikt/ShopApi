@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ShopApplication.DTOs.CartDTOs;
 using ShopApplication.Interfaces;
-using ShopApplication.Interfaces.Repository;
+using ShopApplication.Interfaces.Repositories;
 using ShopApplication.Interfaces.Services;
 using ShopDomain.Models;
 using System;
