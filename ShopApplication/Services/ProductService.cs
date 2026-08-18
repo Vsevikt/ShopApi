@@ -24,12 +24,13 @@ namespace ShopApplication.Services
 
         public async Task<ICollection<ProductReadDTO>> GetAllProductsAsync()
         {
-            var cache = await _cacheService.GetAsync<ICollection<ProductReadDTO>>("Products");
+            var cache = await _cacheService.GetAsync<ICollection<ProductReadDTO>>("products");
+
             if (cache == null)
             {
                 var products = await _repository.GetProductsAsync();
                 cache = _mapper.Map<ICollection<ProductReadDTO>>(products);
-                await _cacheService.SetAsync("Products", cache, TimeSpan.FromMinutes(5));
+                await _cacheService.SetAsync("products", cache, TimeSpan.FromMinutes(5));
             }
 
             return cache;
@@ -37,7 +38,7 @@ namespace ShopApplication.Services
 
         public async Task<ProductReadDTO?> GetProductByIdAsync(int id)
         {
-            var cache = await _cacheService.GetAsync<ProductReadDTO>($"Product:{id}");
+            var cache = await _cacheService.GetAsync<ProductReadDTO>($"products/{id}");
 
             if (cache == null)
             {
@@ -47,7 +48,7 @@ namespace ShopApplication.Services
                     return null;
 
                 cache = _mapper.Map<ProductReadDTO>(product);
-                await _cacheService.SetAsync($"Product:{id}", cache, TimeSpan.FromMinutes(5));
+                await _cacheService.SetAsync($"products/{id}", cache, TimeSpan.FromMinutes(5));
             }
 
             return cache;

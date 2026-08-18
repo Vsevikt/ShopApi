@@ -705,6 +705,26 @@
           }
         }
       },
+      "RESPite/3.1.13": {
+        "runtime": {
+          "lib/net10.0/RESPite.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.13.8476"
+          }
+        }
+      },
+      "StackExchange.Redis/3.1.13": {
+        "dependencies": {
+          "RESPite": "3.1.13",
+          "System.IO.Hashing": "10.0.5"
+        },
+        "runtime": {
+          "lib/net10.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.13.8476"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/10.2.3": {
         "dependencies": {
           "Swashbuckle.AspNetCore.Swagger": "10.2.3",
@@ -844,6 +864,14 @@
           }
         }
       },
+      "System.IO.Hashing/10.0.5": {
+        "runtime": {
+          "lib/net10.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "10.0.0.5",
+            "fileVersion": "10.0.526.15411"
+          }
+        }
+      },
       "System.Memory.Data/8.0.1": {
         "runtime": {
           "lib/net8.0/System.Memory.Data.dll": {
@@ -890,7 +918,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.9",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.3",
           "ShopApplication": "1.0.0",
-          "ShopDomain": "1.0.0"
+          "ShopDomain": "1.0.0",
+          "StackExchange.Redis": "3.1.13"
         },
         "runtime": {
           "ShopInfrastructure.dll": {
@@ -1173,6 +1202,20 @@
       "path": "npgsql.entityframeworkcore.postgresql/10.0.3",
       "hashPath": "npgsql.entityframeworkcore.postgresql.10.0.3.nupkg.sha512"
     },
+    "RESPite/3.1.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wqViG+Dl4Ln/X33IyfmciyGirm1ET+M7kjwbb+oJAbDXLP2u2hX1eOnaEgyIAerJNSP98BytyddcW3ZQH55wgw==",
+      "path": "respite/3.1.13",
+      "hashPath": "respite.3.1.13.nupkg.sha512"
+    },
+    "StackExchange.Redis/3.1.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OvhFdV2ucee2hnN2v2EOcOTMvIzGsq1PX4kAbIYC8cax+MyabSa7Eu3hWY6D//SbxzZQ/eYFvD8Tvg+pK+969g==",
+      "path": "stackexchange.redis/3.1.13",
+      "hashPath": "stackexchange.redis.3.1.13.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/10.2.3": {
       "type": "package",
       "serviceable": true,
@@ -1270,6 +1313,13 @@
       "sha512": "sha512-GJw3bYkWpOgvN3tJo5X4lYUeIFA2HD293FPUhKmp7qxS+g5ywAb34Dnd3cDAFLkcMohy5XTpoaZ4uAHuw0uSPQ==",
       "path": "system.identitymodel.tokens.jwt/8.0.1",
       "hashPath": "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
+    },
+    "System.IO.Hashing/10.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8IBJWcCT9+e4Bmevm4T7+fQEiAh133KGiz4oiVTgJckd3Q76OFdR1falgn9lpz7+C4HJvogCDJeAa2QmvbeVtg==",
+      "path": "system.io.hashing/10.0.5",
+      "hashPath": "system.io.hashing.10.0.5.nupkg.sha512"
     },
     "System.Memory.Data/8.0.1": {
       "type": "package",

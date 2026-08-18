@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
+using ShopApplication.DTOs.Product;
 using ShopApplication.Interfaces.Repositories;
 using ShopApplication.Interfaces.Services;
 using ShopDomain.Models;
@@ -20,12 +21,12 @@ public class CategoryService(ICategoryRepository _repository, IMapper _mapper, I
 
     public async Task<ICollection<CategoryReadDTO>> GetAllCategoriesAsync()
     {
-        var cache = await _cacheService.GetAsync<ICollection<CategoryReadDTO>>("Categories");
+        var cache = await _cacheService.GetAsync<ICollection<CategoryReadDTO>>("categories");
         if (cache == null)
         {
             var categories = await _repository.GetCategoriesAsync();
             cache = _mapper.Map<ICollection<CategoryReadDTO>>(categories);
-            await _cacheService.SetAsync("Categories", cache, TimeSpan.FromMinutes(5));
+            await _cacheService.SetAsync("categories", cache, TimeSpan.FromMinutes(5));
            
         }
         return cache;
@@ -33,11 +34,20 @@ public class CategoryService(ICategoryRepository _repository, IMapper _mapper, I
 
     public async Task<CategoryReadDTO?> GetCategoryByIdAsync(int id)
     {
-        CategoryReadDTO? dto = null;
-        var category = await _repository.GetCategoryAsync(id);
-        if (category != null)
-            dto = _mapper.Map<CategoryReadDTO>(category);
-        return dto;
+        var cache = await _cacheService.GetAsync<CategoryReadDTO>($"categories/{id}");
+
+        if (cache == null)
+        {
+            var category = await _repository.GetCategoryAsync(id);
+
+            if (category == null)
+                return null;
+
+            cache = _mapper.Map<CategoryReadDTO>(category);
+            await _cacheService.SetAsync($"categories/{id}", cache, TimeSpan.FromMinutes(5));
+        }
+
+        return cache;
     }
 
     public async Task<ICollection<CategoryReadDTO>> GetCategoriesByParentAsync()

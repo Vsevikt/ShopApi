@@ -19,7 +19,6 @@ namespace ShopApi.Controllers
     public class ProductController(IProductService _productService, IImageService _imageService, IConfiguration _configuration) : ControllerBase
     {
         [HttpPost]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateProduct([FromForm] ProductCreateRequest dto)
         {
             var maxImages = _configuration.GetValue<int>("FileSettings:MaxProductImages");
@@ -74,7 +73,6 @@ namespace ShopApi.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateProductById(int id, [FromForm] ProductUpdateRequest dto)
         {
             if (id != dto.Id)
@@ -116,7 +114,6 @@ namespace ShopApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteProductById(int id)
         {
             var product = await _productService.DeleteProductAsync(id);

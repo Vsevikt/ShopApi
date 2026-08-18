@@ -14,6 +14,7 @@ using ShopInfrastructure.Data;
 using ShopInfrastructure.Helpers;
 using ShopInfrastructure.Repositories;
 using ShopInfrastructure.Services;
+using StackExchange.Redis;
 using System.Text;
 
 namespace ShopApi
@@ -26,23 +27,11 @@ namespace ShopApi
 
             builder.Services.AddDbContext<ShopDbContext>(options =>
             {
-                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+                //options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection"));
+                options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSqlServerConnection"));
             });
 
             var configuration = builder.Configuration;
-
-            //// 2. JWT Settings Configuration
-            //var jwtSection = configuration.GetSection("Jwt");
-            //var jwtSettings = jwtSection.Get<JwtSettings>()
-            //    ?? throw new InvalidOperationException("JWT settings ('Jwt' section) are not configured in appsettings.json.");
-
-            //// Перевірка довжини ключа під HS256
-            //if (string.IsNullOrWhiteSpace(jwtSettings.Key) || Encoding.UTF8.GetBytes(jwtSettings.Key).Length < 32)
-            //{
-            //    throw new InvalidOperationException("Jwt:Key in appsettings.json must be at least 32 characters long (256 bits).");
-            //}
-
-            //builder.Services.Configure<JwtSettings>(jwtSection);
 
             //JWT Settings
             var jwtSettings = configuration
@@ -81,7 +70,7 @@ namespace ShopApi
             builder.Services.AddMemoryCache();
             builder.Services.AddEndpointsApiExplorer();
 
-            // 5. Swagger + JWT
+            // Swagger + JWT
             builder.Services.AddSwaggerGen(options =>
             {
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -130,6 +119,16 @@ namespace ShopApi
             builder.Services.AddAuthorization();
             builder.Services.AddControllers();
 
+            // Redis
+            builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+            {
+                var config = builder.Configuration.GetConnectionString("RedisServerConnection");
+                return ConnectionMultiplexer.Connect(config);
+            });
+
+            // CACHE
+            builder.Services.AddMemoryCache();
+
             // SERVICES
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -137,7 +136,8 @@ namespace ShopApi
             builder.Services.AddScoped<IImageService, ImageService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IJWTService, JWTService>();
-            builder.Services.AddScoped<ICachingService, MemoryCachingService>();
+            //builder.Services.AddSingleton<ICachingService, MemoryCachingService>();
+            builder.Services.AddSingleton<ICachingService, RedisCachingService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
 
             // REPOSITORIES
