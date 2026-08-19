@@ -3,13 +3,14 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ShopApplication.DTOs.UserDTOs;
 using ShopApplication.Interfaces.Services;
+using System.Text.Json;
 
 namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
 
-    public class AuthController(IAuthService _authService) : ControllerBase
+    public class AuthController(IAuthService _authService, IQueueService _queueService) : ControllerBase
     {
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] UserCreateDTO dto)
@@ -28,6 +29,8 @@ namespace ShopApi.Controllers
                     SameSite = SameSiteMode.Strict,
                     //Expires = result.RefreshTokenExpires
                 });
+
+            await _queueService.PublishAsync("Users", user.User);
 
             return Ok(new { user = user.User }); // token = user.Token // refresh = user.RefreshToken
         }

@@ -126,6 +126,11 @@ namespace ShopApi
                 return ConnectionMultiplexer.Connect(config);
             });
 
+            // RabbitMq
+            builder.Services.Configure<RabbitMqSettings>(
+                builder.Configuration.GetSection("RabbitMq")
+            );
+
             // CACHE
             builder.Services.AddMemoryCache();
 
@@ -139,6 +144,7 @@ namespace ShopApi
             //builder.Services.AddSingleton<ICachingService, MemoryCachingService>();
             builder.Services.AddSingleton<ICachingService, RedisCachingService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
+            builder.Services.AddScoped<IQueueService, RabbitMqService>();
 
             // REPOSITORIES
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
