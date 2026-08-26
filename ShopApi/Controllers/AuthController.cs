@@ -53,7 +53,7 @@ namespace ShopApi.Controllers
                     //Expires = result.RefreshTokenExpires
                 });
 
-            return Ok(new { user = user.User, token = user.Token }); 
+            return Ok(new { user = user.User, token = user.Token });
         }
 
         [HttpPost("refresh")]
@@ -149,6 +149,6 @@ namespace ShopApi.Controllers
                 return BadRequest("Недійсний, термін дії минув або вже використаний токен.");
 
             return Ok("Пароль успішно змінено.");
-            }
         }
     }
+}

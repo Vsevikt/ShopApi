@@ -26,9 +26,7 @@ namespace ShopInfrastructure.Repositories
                 await _context.Carts.AddAsync(cart);
             }
 
-
             await _context.SaveChangesAsync();
-
 
             return existingCart?.Id ?? cart.Id;
         }

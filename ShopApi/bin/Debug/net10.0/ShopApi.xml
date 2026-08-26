@@ -4,6 +4,18 @@
         <name>ShopApi</name>
     </assembly>
     <members>
+        <member name="T:ShopApi.Services.RabbitMqReaderService">
+            <summary>
+            Робота класа запускається у фоновому режимі, всі логі пишутся в 1 консоль
+            </summary>
+        </member>
+        <member name="M:ShopApi.Services.RabbitMqReaderService.#ctor(Microsoft.Extensions.Logging.ILogger{ShopApi.Services.RabbitMqReaderService},Microsoft.Extensions.Options.IOptions{ShopInfrastructure.Configuration.RabbitMqSettings})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="options"></param>
+        </member>
         <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
             <summary>
             Generates a documentation comment ID for a type.

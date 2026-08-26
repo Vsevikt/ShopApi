@@ -31,7 +31,7 @@ namespace ShopInfrastructure.Repositories
             return await _context.Users.FirstOrDefaultAsync(user => user.Email == email);
         }
 
-        public async Task<User?> GetUserByIdAsync(Guid id)
+        public async Task<User?> GetUserByIdAsync(Guid? id)
         {
             return await _context.Users.FirstOrDefaultAsync(user => user.Id == id);
         }   

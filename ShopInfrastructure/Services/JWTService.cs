@@ -2,6 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using ShopApplication.DTOs.UserDTOs;
 using ShopApplication.Interfaces.Services;
+using ShopDomain.Models;
 using ShopInfrastructure.Configuration;
 using System;
 using System.Collections.Generic;
@@ -24,11 +25,8 @@ namespace ShopInfrastructure.Services
             var key = Encoding.UTF8.GetBytes(_jwtSettings.Key);
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, userLoginDto.Email),
-                new Claim(JwtRegisteredClaimNames.Sub, userLoginDto.Email),
                 new Claim(ClaimTypes.Email, userLoginDto.Email),
                 new Claim(ClaimTypes.Role, role),
-                new Claim("role", role),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
             var signingKey = new SymmetricSecurityKey(key);

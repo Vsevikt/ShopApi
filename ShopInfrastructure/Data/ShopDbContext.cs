@@ -15,6 +15,8 @@ namespace ShopInfrastructure.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
@@ -105,6 +107,16 @@ namespace ShopInfrastructure.Data
                       .HasForeignKey(x => x.ProductId)
                       .OnDelete(DeleteBehavior.Cascade);
             });
+
+            modelBuilder.Entity<Order>()
+                .HasMany(o => o.OrderDetails)
+                .WithOne(od => od.Order)
+                .HasForeignKey(od => od.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Order>()
+                .Property(o => o.Status)
+                .HasConversion<string>();
         }
     }
 }

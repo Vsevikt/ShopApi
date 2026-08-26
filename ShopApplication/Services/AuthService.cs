@@ -11,7 +11,7 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class AuthService(IMapper _mapper, IAuthRepository _repository, IHashHelper _hashHelper, IJWTService _jwtService, IRefreshTokenRepository _refreshTokenRepository, IPasswordResetTokenRepository _passwordResetTokenRepository, IEmailService _emailService) : IAuthService
+    public class AuthService(IMapper _mapper, IAuthRepository _repository, IHashHelper _hashHelper, IJWTService _jwtService, IRefreshTokenRepository _refreshTokenRepository, IPasswordResetTokenRepository _passwordResetTokenRepository, IEmailService _emailService, IQueueService _queueService) : IAuthService
     {
         public async Task<(UserReadDTO? User, string? Token, string? RefreshToken)> RegisterAsync(UserCreateDTO dto)
         {
@@ -36,6 +36,7 @@ namespace ShopApplication.Services
                         ExpiresAt = DateTime.UtcNow.AddDays(refreshToken.Item2)
                     });
 
+                    await _queueService.PublishAsync<UserCreateDTO>("Users", dto);
                     return (_mapper.Map<UserReadDTO>(registerUser), token, refreshToken.Item1);
                 }
             }

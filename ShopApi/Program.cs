@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using ShopApi.Services;
+using ShopApi.Services;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Helpers;
 using ShopApplication.Interfaces.Repositories;
@@ -131,11 +132,19 @@ namespace ShopApi
                 builder.Configuration.GetSection("RabbitMq")
             );
 
+            builder.Services.AddHostedService<RabbitMqReaderService>();
+            builder.Services.AddHostedService<OrderProcessingService>();
+
+            // EmailSettings
+            builder.Services.Configure<EmailSettings>(
+                builder.Configuration.GetSection("EmailSettings"));
+
             // CACHE
             builder.Services.AddMemoryCache();
 
             // SERVICES
             builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<ICartService, CartService>();
             builder.Services.AddScoped<IImageService, ImageService>();
@@ -148,12 +157,13 @@ namespace ShopApi
 
             // REPOSITORIES
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<ICartRepository, CartRepository>();
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
             builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             builder.Services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
-
+            
             // HELPERS
             builder.Services.AddSingleton<IHashHelper, HashHelper>();
 

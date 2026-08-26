@@ -10,7 +10,7 @@ namespace ShopApplication.Interfaces.Repositories
         Task<User>? RegisterUserAsync(User user, string hash);
         Task<bool> IsExistEmailAsync(string email);
         Task<User>? GetUserByEmailAsync(string email);
-        Task<User>? GetUserByIdAsync(Guid id);
+        Task<User>? GetUserByIdAsync(Guid? id);
         Task<User>? UpdateUserAsync(User user);
     }
 }

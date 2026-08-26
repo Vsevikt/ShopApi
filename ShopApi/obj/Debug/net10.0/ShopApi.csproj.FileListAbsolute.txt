@@ -4,8 +4,10 @@ G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.GeneratedMSBuildEditorConfig.
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.AssemblyInfoInputs.cache
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.AssemblyInfo.cs
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.csproj.CoreCompileInputs.cache
+G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.MvcApplicationPartsAssemblyInfo.cs
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.MvcApplicationPartsAssemblyInfo.cache
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.sourcelink.json
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\appsettings.Development.json
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\appsettings.json
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\ShopApi.staticwebassets.runtime.json
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\ShopApi.staticwebassets.endpoints.json
@@ -51,6 +53,11 @@ G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Mono.TextTemplating.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Newtonsoft.Json.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Npgsql.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\RabbitMQ.Client.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\RESPite.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\StackExchange.Redis.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -63,6 +70,7 @@ G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\System.Composition.Runtime.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\System.Composition.TypedParts.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\System.IO.Hashing.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\System.Memory.Data.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
@@ -171,11 +179,3 @@ G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.xml
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.pdb
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.genruntimeconfig.cache
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ref\ShopApi.dll
-G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.MvcApplicationPartsAssemblyInfo.cs
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Npgsql.dll
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\appsettings.Development.json
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\RESPite.dll
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\StackExchange.Redis.dll
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\System.IO.Hashing.dll
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\RabbitMQ.Client.dll

@@ -36,6 +36,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ShopApi.Controllers.OrderController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/Order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ShopApplication.DTOs.OrderDTOs.OrderCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.ShopApi.Controllers.TestEmailController",
+    "Method": "SendTestEmail",
+    "RelativePath": "api/TestEmail/send-test",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "toEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ShopApi.Controllers.UserController",
     "Method": "Register",
     "RelativePath": "api/user/register",
