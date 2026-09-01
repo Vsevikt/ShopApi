@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "eTQi97L6DGs=",
+  "dgSpecHash": "ncmuczSK2Eg=",
   "success": true,
   "projectFilePath": "G:\\tasks\\ShopApi\\ShopDomain\\ShopDomain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Viktor\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\Viktor\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\Viktor\\.nuget\\packages\\mongodb.bson\\3.11.1\\mongodb.bson.3.11.1.nupkg.sha512",
+    "C:\\Users\\Viktor\\.nuget\\packages\\mongodb.driver\\3.11.1\\mongodb.driver.3.11.1.nupkg.sha512",
+    "C:\\Users\\Viktor\\.nuget\\packages\\sharpcompress\\0.48.1\\sharpcompress.0.48.1.nupkg.sha512",
+    "C:\\Users\\Viktor\\.nuget\\packages\\snappier\\1.3.1\\snappier.1.3.1.nupkg.sha512",
+    "C:\\Users\\Viktor\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
+  ],
   "logs": []
 }

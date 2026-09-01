@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
-using ShopApi.Services;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using ShopApi.Services;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Helpers;
@@ -131,7 +132,14 @@ namespace ShopApi
             builder.Services.Configure<RabbitMqSettings>(
                 builder.Configuration.GetSection("RabbitMq")
             );
+                
+            // MongoDB
+            builder.Services.Configure<MongoDbSettings>(
+                builder.Configuration.GetSection("MongoDb"));
 
+            builder.Services.AddSingleton<MongoDbContext>();
+
+            // AddHostedService
             builder.Services.AddHostedService<RabbitMqReaderService>();
             builder.Services.AddHostedService<OrderProcessingService>();
 
@@ -154,6 +162,8 @@ namespace ShopApi
             builder.Services.AddSingleton<ICachingService, RedisCachingService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddScoped<IQueueService, RabbitMqService>();
+            builder.Services.AddSingleton<IMongoDbService, MongoDbService>();
+            builder.Services.AddScoped<IProductMessageService, ProductMessageService>();
 
             // REPOSITORIES
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -163,7 +173,8 @@ namespace ShopApi
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
             builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             builder.Services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
-            
+            builder.Services.AddScoped<IProductMessageRepository, ProductMessageRepository>();
+
             // HELPERS
             builder.Services.AddSingleton<IHashHelper, HashHelper>();
 

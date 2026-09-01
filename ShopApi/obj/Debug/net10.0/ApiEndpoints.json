@@ -574,6 +574,27 @@
   },
   {
     "ContainingType": "ShopApi.Controllers.ProductController",
+    "Method": "AddMessage",
+    "RelativePath": "api/v1/Product/{id}/messages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ShopApplication.DTOs.ProductDTOs.ProductMessageCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.ProductController",
     "Method": "SearchProduct",
     "RelativePath": "api/v1/Product/search",
     "HttpMethod": "GET",

@@ -6,6 +6,7 @@ using ShopApi.Filters;
 using ShopApi.Requests.Products;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
+using ShopApplication.DTOs.ProductDTOs;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Services;
@@ -16,7 +17,7 @@ namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class ProductController(IProductService _productService, IImageService _imageService, IConfiguration _configuration) : ControllerBase
+    public class ProductController(IProductService _productService, IImageService _imageService, IConfiguration _configuration, IProductMessageService _messageService, ILogger<ProductController> _logger) : ControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromForm] ProductCreateRequest dto)
@@ -131,6 +132,17 @@ namespace ShopApi.Controllers
             if (products == null)
                 return NotFound("Product not found");
             return Ok(products);
+        }
+
+        [HttpPost("{id}/messages")]
+        public async Task<IActionResult> AddMessage(int id, ProductMessageCreateDto dto)
+        {
+            var result = await _messageService.CreateMessageAsync(id, dto);
+
+            if (!result)
+                return BadRequest();
+
+            return Ok();
         }
     }
 }

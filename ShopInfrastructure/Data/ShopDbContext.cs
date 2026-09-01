@@ -21,6 +21,7 @@ namespace ShopInfrastructure.Data
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
 
+
         // Автоматично встановлює CreatedAt і UpdatedAt перед збереженням
         public override int SaveChanges()
         {
@@ -119,4 +120,5 @@ namespace ShopInfrastructure.Data
                 .HasConversion<string>();
         }
     }
+
 }

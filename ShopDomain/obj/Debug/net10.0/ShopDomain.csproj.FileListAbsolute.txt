@@ -10,3 +10,4 @@ G:\tasks\ShopApi\ShopDomain\obj\Debug\net10.0\ShopDomain.dll
 G:\tasks\ShopApi\ShopDomain\obj\Debug\net10.0\refint\ShopDomain.dll
 G:\tasks\ShopApi\ShopDomain\obj\Debug\net10.0\ShopDomain.pdb
 G:\tasks\ShopApi\ShopDomain\obj\Debug\net10.0\ref\ShopDomain.dll
+G:\tasks\ShopApi\ShopDomain\obj\Debug\net10.0\ShopDomain.csproj.AssemblyReference.cache

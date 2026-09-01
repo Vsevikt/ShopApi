@@ -179,3 +179,9 @@ G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.xml
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.pdb
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.genruntimeconfig.cache
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ref\ShopApi.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\DnsClient.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\MongoDB.Bson.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\MongoDB.Driver.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\SharpCompress.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Snappier.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\ZstdSharp.dll

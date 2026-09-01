@@ -1,14 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopApplication.Interfaces.Repositories;
+using ShopApplication.Interfaces.Services;
 using ShopDomain.Models;
 using ShopInfrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using MongoDB.Driver;
 
 namespace ShopInfrastructure.Repositories
 {
-    public class ProductRepository(ShopDbContext _context) : IProductRepository
+    public class ProductRepository(ShopDbContext _context, MongoDbContext _mongoDbContext) : IProductRepository
     {
         public async Task<int?> AddProductAsync(Product product)
         {

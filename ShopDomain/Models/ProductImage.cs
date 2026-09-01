@@ -14,9 +14,8 @@ namespace ShopDomain.Models
         [Column("id")]
         public int Id { get; set; }
 
-        [Required]
         [Column("url")]
-        public string Url { get; set; } = string.Empty;
+        public string? Url { get; set; } = string.Empty;
 
         [Column("is_primary")]
         public bool IsPrimary { get; set; } = false;

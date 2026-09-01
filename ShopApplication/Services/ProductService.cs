@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
+using ShopApplication.DTOs.ProductDTOs;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Repositories;
 using ShopApplication.Interfaces.Services;
@@ -14,7 +17,7 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class ProductService(IProductRepository _repository, IImageService _imageService, IMapper _mapper, ICachingService _cacheService) : IProductService
+    public class ProductService(IProductRepository _repository, IImageService _imageService, IMapper _mapper, ICachingService _cacheService ) : IProductService
     {
         public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
         {

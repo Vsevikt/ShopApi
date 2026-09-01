@@ -1,6 +1,8 @@
 ﻿using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
+using ShopApplication.DTOs.ProductDTOs;
+using ShopDomain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

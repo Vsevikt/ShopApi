@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ShopApplication.DTOs.Product;
+using ShopApplication.DTOs.ProductDTOs;
 using ShopDomain.Models;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,7 @@ namespace ShopApplication.Mapping
 
 
             CreateMap<ProductUpdateDTO, Product>();
+            CreateMap<ProductMessageCreateDto, ProductMessage>();
         }
     }
 }
