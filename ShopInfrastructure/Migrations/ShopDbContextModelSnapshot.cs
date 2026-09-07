@@ -48,7 +48,8 @@ namespace ShopInfrastructure.Migrations
                         .HasColumnName("is_active");
 
                     b.Property<bool>("IsShow")
-                        .HasColumnType("boolean");
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_show");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -294,7 +295,6 @@ namespace ShopInfrastructure.Migrations
                         .HasColumnName("updated_at");
 
                     b.Property<string>("Url")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("url");
 

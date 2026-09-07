@@ -10,6 +10,8 @@ using ShopApplication.Interfaces.Helpers;
 using ShopApplication.Interfaces.Repositories;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Mapping;
+using MediatR;
+using ShopApplication.Commands.Product;
 using ShopApplication.Services;
 using ShopInfrastructure.Configuration;
 using ShopInfrastructure.Data;
@@ -18,6 +20,7 @@ using ShopInfrastructure.Repositories;
 using ShopInfrastructure.Services;
 using StackExchange.Redis;
 using System.Text;
+using ShopApplication;
 
 namespace ShopApi
 {
@@ -69,12 +72,27 @@ namespace ShopApi
                 });
             });
 
+
             builder.Services.AddMemoryCache();
             builder.Services.AddEndpointsApiExplorer();
 
+            // MEDIATR
+            builder.Services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+            });
+
+            // AssemblyMarker
+            builder.Services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(
+                    typeof(ShopApplicationAssemblyMarker).Assembly
+                );
+            });
+
             // Swagger + JWT
             builder.Services.AddSwaggerGen(options =>
-            {
+            {   
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Type = SecuritySchemeType.Http,

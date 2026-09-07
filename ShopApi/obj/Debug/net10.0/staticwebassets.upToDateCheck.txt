@@ -73,6 +73,7 @@ wwwroot\products\7652b867-e5e3-4467-9a04-7454ac1936c4.jpg
 wwwroot\products\7824a648-d349-4697-a2b6-83e2acb315c7.jpg
 wwwroot\products\7bc53ca8-ce21-4631-9226-0fc37ab41f7d.jpg
 wwwroot\products\82c768a4-68f3-4365-bbdb-12754894c04b.jpg
+wwwroot\products\85c855ef-601a-4610-9d54-343c3914e424.jpg
 wwwroot\products\8746f78d-92e1-49f4-b42c-642f90adaad0.jpg
 wwwroot\products\879d719a-ae94-4fb6-946d-5c2f7eded0c6.jpg
 wwwroot\products\94db2edd-37f8-4208-8e3f-ab0ec4e8caa2.jpg

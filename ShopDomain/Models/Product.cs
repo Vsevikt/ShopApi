@@ -38,5 +38,6 @@ public class Product : BaseEntity
     //Navigation properties
     public ICollection <ProductImage> Images { get; set; } = new List<ProductImage>();
 
+    [Column("is_show")]
     public bool IsShow { get; set; }
 }

@@ -185,3 +185,5 @@ G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\MongoDB.Driver.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\SharpCompress.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Snappier.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\ZstdSharp.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\MediatR.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\MediatR.Contracts.dll

@@ -10,7 +10,9 @@ namespace ShopApplication.DTOs.Product
         public string Name { get; set; } = string.Empty;
         public decimal Price { get; set; }
         public int StockQty { get; set; } = 0;
+        public bool IsActive { get; set; } = true;
         public List<string> ImageUrls { get; set; } = new();
         public string CategoryName { get; set; } = string.Empty;
+
     }
 }

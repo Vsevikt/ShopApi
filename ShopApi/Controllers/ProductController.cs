@@ -1,14 +1,19 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ShopApi.Filters;
 using ShopApi.Requests.Products;
+using ShopApplication.Commands.Product;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
 using ShopApplication.DTOs.ProductDTOs;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Services;
+using MediatR;
+using ShopApplication.Commands.Product;
+using ShopApplication.Queries.Product;
 using ShopApplication.Services;
 using ShopDomain.Models;
 using static System.Net.Mime.MediaTypeNames;
@@ -17,7 +22,7 @@ namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class ProductController(IProductService _productService, IImageService _imageService, IConfiguration _configuration, IProductMessageService _messageService, ILogger<ProductController> _logger) : ControllerBase
+    public class ProductController(IProductService _productService, IImageService _imageService, IConfiguration _configuration, IProductMessageService _messageService, ILogger<ProductController> _logger, IMediator _mediator) : ControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromForm] ProductCreateRequest dto)
@@ -57,14 +62,14 @@ namespace ShopApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductById([FromRoute] int id)
         {
-            var product = await _productService.GetProductByIdAsync(id);
+            //var product = await _productService.GetProductByIdAsync(id);
+            var product = await _mediator.Send(new GetProductByIdQuery(id));
 
             if (product == null)
                 return NotFound("Product not found");
 
             return Ok(product);
         }
-
 
         [HttpGet]
         public async Task<IActionResult> GetAllProducts()
@@ -117,11 +122,10 @@ namespace ShopApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProductById(int id)
         {
-            var product = await _productService.DeleteProductAsync(id);
-
+            //var product = await _productService.DeleteProductAsync(id);
+            var product = await _mediator.Send(new DeleteProductByIdCommand(id));
             if (product == null)
                 return NotFound("Product not found");
-
             return Ok($"Product deleted {product}");
         }
 
