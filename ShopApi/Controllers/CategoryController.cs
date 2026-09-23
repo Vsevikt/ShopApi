@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ShopApi.Requests.Categories;
 using ShopApi.Services;
@@ -15,7 +16,7 @@ namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CategoryController(ICategoryService _categoryService, IImageService _imageService, IConfiguration _configuration, IConfiguration _mapper) : ControllerBase
+    public class CategoryController(ICategoryService _categoryService, IImageService _imageService, IConfiguration _configuration, IConfiguration _mapper, IValidator<CategoryCreateDTO> _validator) : ControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromForm] CategoryCreateRequest dto)
@@ -40,6 +41,13 @@ namespace ShopApi.Controllers
                 Slug = dto.Slug,
                 ParentId = dto.ParentId == 0 ? null : dto.ParentId,
             };
+
+            var result = await _validator.ValidateAsync(createDto);
+
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
 
             var id = await _categoryService.CreateCategoryAsync(createDto);
 

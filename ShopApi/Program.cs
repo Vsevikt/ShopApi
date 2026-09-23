@@ -21,6 +21,7 @@ using ShopInfrastructure.Services;
 using StackExchange.Redis;
 using System.Text;
 using ShopApplication;
+using FluentValidation;
 
 namespace ShopApi
 {
@@ -30,6 +31,10 @@ namespace ShopApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // VALIDATORS
+            builder.Services.AddValidatorsFromAssemblyContaining<CreateCategoryValidator>();
+
+            // DATABASE
             builder.Services.AddDbContext<ShopDbContext>(options =>
             {
                 //options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection"));

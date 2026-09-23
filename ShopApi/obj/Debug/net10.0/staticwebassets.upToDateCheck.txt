@@ -4,6 +4,7 @@ wwwroot\categories\166f0a10-a131-4427-bd03-79f3d97cae6e.jpg
 wwwroot\categories\1eb593a8-4fb7-4972-b7c9-e84ecda1677f.jpg
 wwwroot\categories\2b0f79a0-2744-488d-ac47-9dbd55154152.jpg
 wwwroot\categories\32861ab4-8f85-48b2-9be8-2f917088bb79.jpg
+wwwroot\categories\3a1cabe9-a319-472a-9394-9568d82aa9d3.jpg
 wwwroot\categories\3be25239-f55b-4fe5-ac0c-e4b105f83db7.jpg
 wwwroot\categories\4b3b859c-3234-4797-9e1b-a4d48b4a5cad.jpg
 wwwroot\categories\4d41192a-ff08-45ac-a678-044b39c44c71.jpg
@@ -11,6 +12,7 @@ wwwroot\categories\52b1202d-c18c-4286-a317-9e51e053be1e.jpg
 wwwroot\categories\56807c98-2e01-4014-a441-9c304331cd21.jpg
 wwwroot\categories\6097436c-e3e9-4f87-82c3-ce12023c22ea.jpg
 wwwroot\categories\66c4421d-421a-49f1-b41f-cdf62a92eb4a.jpg
+wwwroot\categories\674c6188-8852-44fb-91b2-d09df74485b4.jpg
 wwwroot\categories\7b94a629-0763-43a7-9d5a-b3894f75381f.jpg
 wwwroot\categories\7c771131-b61e-4f14-9090-d2f2c2f82ad2.jpg
 wwwroot\categories\82b78baa-24d7-488a-8bc2-481dfeee85ed.jpg
