@@ -16,7 +16,7 @@ namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CategoryController(ICategoryService _categoryService, IImageService _imageService, IConfiguration _configuration, IConfiguration _mapper, IValidator<CategoryCreateDTO> _validator) : ControllerBase
+    public class CategoryController(ICategoryService _categoryService, IImageService _imageService, IConfiguration _configuration, IConfiguration _mapper, IValidator<CategoryCreateDTO> _createValidator, IValidator<CategoryUpdateDTO> _updateValidator) : ControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromForm] CategoryCreateRequest dto)
@@ -42,7 +42,7 @@ namespace ShopApi.Controllers
                 ParentId = dto.ParentId == 0 ? null : dto.ParentId,
             };
 
-            var result = await _validator.ValidateAsync(createDto);
+            var result = await _createValidator.ValidateAsync(createDto);
 
             if (!result.IsValid)
             {
@@ -135,12 +135,17 @@ namespace ShopApi.Controllers
                 ParentId = dto.ParentId == 0 ? null : dto.ParentId
             };
 
+            var result = await _updateValidator.ValidateAsync(updateDto);
+
+            if (!result.IsValid)
+                return BadRequest(result.Errors);
+
             var category = await _categoryService.UpdateCategoryAsync(updateDto);
 
             if (!category)
                 return NotFound("Category not found.");
 
-            return Ok("Category updated");
+            return Ok($"Category updated {id}");
         }
 
         [HttpDelete("{id}")]
@@ -151,7 +156,7 @@ namespace ShopApi.Controllers
             if (category == null)
                 return NotFound("Category not found");
 
-            return Ok($"Category deleted {category}");
+            return Ok($"Category deleted {id}");
         }
     }
 }

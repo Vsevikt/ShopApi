@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -6,13 +8,13 @@ using Microsoft.AspNetCore.Mvc;
 using ShopApi.Filters;
 using ShopApi.Requests.Products;
 using ShopApplication.Commands.Product;
+using ShopApplication.Commands.Product;
+using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
 using ShopApplication.DTOs.ProductDTOs;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Services;
-using MediatR;
-using ShopApplication.Commands.Product;
 using ShopApplication.Queries.Product;
 using ShopApplication.Services;
 using ShopDomain.Models;
@@ -22,7 +24,7 @@ namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class ProductController(IProductService _productService, IImageService _imageService, IConfiguration _configuration, IProductMessageService _messageService, ILogger<ProductController> _logger, IMediator _mediator) : ControllerBase
+    public class ProductController(IProductService _productService, IImageService _imageService, IConfiguration _configuration, IProductMessageService _messageService, ILogger<ProductController> _logger, IMediator _mediator, IValidator<ProductCreateDTO> _createValidator, IValidator<ProductUpdateDTO> _updateValidator) : ControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromForm] ProductCreateRequest dto)
@@ -54,6 +56,13 @@ namespace ShopApi.Controllers
                     dto.ImageUrls.Add(imageUrl);
             }
 
+            var result = await _createValidator.ValidateAsync(dto);
+
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
+
             var id = await _productService.CreateProductAsync(dto);
 
             return Ok($"Product created {id}");
@@ -79,7 +88,9 @@ namespace ShopApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProductById(int id, [FromForm] ProductUpdateRequest dto)
+        public async Task<IActionResult> UpdateProductById(
+    int id,
+    [FromForm] ProductUpdateRequest dto)
         {
             if (id != dto.Id)
                 return NotFound("Product not found");
@@ -108,13 +119,33 @@ namespace ShopApi.Controllers
                 if (image.Length > maxSizeBytes)
                     return BadRequest($"Maximum file size is {maxSizeMb} MB.");
 
-                var imageUrl = await _imageService.SaveFileAsync(image, _configuration["DirnameForFiles:Products"]);
+                var imageUrl = await _imageService.SaveFileAsync(
+                    image,
+                    _configuration["DirnameForFiles:Products"]);
 
                 if (!string.IsNullOrEmpty(imageUrl))
                     dto.ImageUrls.Add(imageUrl);
             }
 
-            var product = await _productService.UpdateProductAsync(dto);
+            var updateDto = new ProductUpdateDTO
+            {
+                Id = id,
+                Name = dto.Name,
+                Price = dto.Price,
+                StockQty = dto.StockQty,
+                CategoryId = dto.CategoryId,
+                ImageUrls = dto.ImageUrls
+            };
+
+            var result = await _updateValidator.ValidateAsync(updateDto);
+
+            if (!result.IsValid)
+                return BadRequest(result.Errors);
+
+            var product = await _productService.UpdateProductAsync(updateDto);
+
+            if (!product)
+                return NotFound("Product not found");
 
             return Ok("Product updated");
         }

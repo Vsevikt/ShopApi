@@ -22,6 +22,8 @@ using StackExchange.Redis;
 using System.Text;
 using ShopApplication;
 using FluentValidation;
+using ShopApplication.Validators.Product;
+using ShopApplication.Validators.Category;
 
 namespace ShopApi
 {
@@ -33,6 +35,9 @@ namespace ShopApi
 
             // VALIDATORS
             builder.Services.AddValidatorsFromAssemblyContaining<CreateCategoryValidator>();
+            builder.Services.AddValidatorsFromAssemblyContaining<UpdateCategoryValidator>();
+            builder.Services.AddValidatorsFromAssemblyContaining<CreateProductValidator>();
+            builder.Services.AddValidatorsFromAssemblyContaining<UpdateProductValidator>();
 
             // DATABASE
             builder.Services.AddDbContext<ShopDbContext>(options =>

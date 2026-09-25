@@ -1,12 +1,14 @@
 ﻿using FluentValidation;
-using ShopApplication.DTOs.Category;
+using ShopApplication.DTOs.CategoryDTOs;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace ShopApplication.Validators.Category;
 
-public class CreateCategoryValidator : AbstractValidator<CategoryCreateDTO>
+public class UpdateCategoryValidator : AbstractValidator<CategoryUpdateDTO>
 {
-    public CreateCategoryValidator()
+    public UpdateCategoryValidator()
     {
         RuleFor(category => category.Name)
             .NotEmpty()
@@ -22,6 +24,6 @@ public class CreateCategoryValidator : AbstractValidator<CategoryCreateDTO>
 
         RuleFor(category => category.Url)
             .MaximumLength(500)
-            .WithMessage("URL зображення не може бути довшим за 500 символів");
+            .WithMessage("URL не може бути довшим за 500 символів");
     }
 }

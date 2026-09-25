@@ -64,6 +64,7 @@ wwwroot\products\383e49a8-3e2e-47bf-b632-5d534e003ce0.jpg
 wwwroot\products\3abc50eb-0585-4220-89a5-568bc3e0119d.jpg
 wwwroot\products\3d3ebd99-853e-4d04-a0ae-66b383c64855.jpg
 wwwroot\products\4415d8de-1935-4d72-b44c-9a547e069651.jpg
+wwwroot\products\44d42ea0-d92b-44ff-9ced-4e9df569c5c9.jpg
 wwwroot\products\47ac9392-48c2-4817-9384-07d5a070cbf5.jpg
 wwwroot\products\4a8a78d4-c96d-46f6-9ecf-d33022da0c9d.jpg
 wwwroot\products\4acd07b8-f3ff-4b61-9320-7982134a7104.jpg
