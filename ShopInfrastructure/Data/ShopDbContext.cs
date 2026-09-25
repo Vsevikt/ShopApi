@@ -20,6 +20,7 @@ namespace ShopInfrastructure.Data
         public DbSet<User> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
+        public DbSet<DeliveryAddress> DeliveryAddresses { get; set; }
 
 
         // Автоматично встановлює CreatedAt і UpdatedAt перед збереженням
@@ -118,6 +119,11 @@ namespace ShopInfrastructure.Data
             modelBuilder.Entity<Order>()
                 .Property(o => o.Status)
                 .HasConversion<string>();
+
+            modelBuilder.Entity<DeliveryAddress>()
+                .HasOne(x => x.User)
+                .WithMany(x => x.DeliveryAddresses)
+                .HasForeignKey(x => x.UserId);
         }
     }
 

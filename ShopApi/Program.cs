@@ -1,3 +1,5 @@
+using FluentValidation;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -5,14 +7,18 @@ using Microsoft.OpenApi;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using ShopApi.Services;
+using ShopApplication;
+using ShopApplication.Commands.DeliveryAddress;
+using ShopApplication.Commands.Product;
+using ShopApplication.DeliveryAddresses.Handlers.AddDeliveryAddress;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Helpers;
 using ShopApplication.Interfaces.Repositories;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Mapping;
-using MediatR;
-using ShopApplication.Commands.Product;
 using ShopApplication.Services;
+using ShopApplication.Validators.Category;
+using ShopApplication.Validators.Product;
 using ShopInfrastructure.Configuration;
 using ShopInfrastructure.Data;
 using ShopInfrastructure.Helpers;
@@ -20,10 +26,6 @@ using ShopInfrastructure.Repositories;
 using ShopInfrastructure.Services;
 using StackExchange.Redis;
 using System.Text;
-using ShopApplication;
-using FluentValidation;
-using ShopApplication.Validators.Product;
-using ShopApplication.Validators.Category;
 
 namespace ShopApi
 {
@@ -38,6 +40,8 @@ namespace ShopApi
             builder.Services.AddValidatorsFromAssemblyContaining<UpdateCategoryValidator>();
             builder.Services.AddValidatorsFromAssemblyContaining<CreateProductValidator>();
             builder.Services.AddValidatorsFromAssemblyContaining<UpdateProductValidator>();
+            builder.Services.AddValidatorsFromAssemblyContaining<AddDeliveryAddressCommand>();
+            builder.Services.AddValidatorsFromAssemblyContaining<AddDeliveryAddressHandler>();
 
             // DATABASE
             builder.Services.AddDbContext<ShopDbContext>(options =>
@@ -202,6 +206,7 @@ namespace ShopApi
             builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             builder.Services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
             builder.Services.AddScoped<IProductMessageRepository, ProductMessageRepository>();
+            builder.Services.AddScoped<IDeliveryAddressRepository, DeliveryAddressRepository>();
 
             // HELPERS
             builder.Services.AddSingleton<IHashHelper, HashHelper>();

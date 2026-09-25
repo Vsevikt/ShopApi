@@ -20,11 +20,12 @@ namespace ShopInfrastructure.Services
         {
             _jwtSettings = jwtOptions.Value;
         }
-        public string GenerateAccessToken(UserLoginDTO userLoginDto, string role)
+        public string GenerateAccessToken(UserLoginDTO userLoginDto, string role, Guid userId)
         {
             var key = Encoding.UTF8.GetBytes(_jwtSettings.Key);
             var claims = new List<Claim>
             {
+                new Claim("UserId", userId.ToString()),
                 new Claim(ClaimTypes.Email, userLoginDto.Email),
                 new Claim(ClaimTypes.Role, role),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())

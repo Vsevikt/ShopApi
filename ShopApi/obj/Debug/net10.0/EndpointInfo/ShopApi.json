@@ -242,6 +242,60 @@
         }
       }
     },
+    "/api/v1/Auth/address": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryAddressCreateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryAddressCreateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryAddressCreateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/address/{id}": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/Cart": {
       "post": {
         "tags": [
@@ -1191,6 +1245,80 @@
         },
         "additionalProperties": false
       },
+      "DeliveryAddress": {
+        "required": [
+          "city",
+          "house",
+          "street",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "city": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "street": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "house": {
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
+          },
+          "apartment": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryAddressCreateDTO": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "street": {
+            "type": "string",
+            "nullable": true
+          },
+          "house": {
+            "type": "string",
+            "nullable": true
+          },
+          "apartment": {
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ForgotPasswordDTO": {
         "type": "object",
         "properties": {
@@ -1425,6 +1553,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RefreshToken"
+            },
+            "nullable": true
+          },
+          "deliveryAddresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeliveryAddress"
             },
             "nullable": true
           }

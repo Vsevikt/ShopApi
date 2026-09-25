@@ -7,7 +7,7 @@ namespace ShopApplication.Interfaces.Services
 {
     public interface IJWTService
     {
-        string GenerateAccessToken(UserLoginDTO userLoginDto, string role);
+        string GenerateAccessToken(UserLoginDTO userLoginDto, string role, Guid userId);
         (string, int) GenerateRefreshToken();
     }
 }

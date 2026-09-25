@@ -24,7 +24,7 @@ namespace ShopApplication.Services
 
                 if (registerUser != null)
                 {
-                    var token = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString());
+                    var token = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString(), user.Id);
                     var refreshToken = _jwtService.GenerateRefreshToken();
 
                     await _refreshTokenRepository.AddTokenAsync(new RefreshToken
@@ -51,7 +51,7 @@ namespace ShopApplication.Services
                 var isPasswordValid = _hashHelper.IsValidPassword(password, user.PasswordHash);
                 if (isPasswordValid)
                 {
-                    var token = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString());
+                    var token = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString(), user.Id);
                     var refreshToken = _jwtService.GenerateRefreshToken();
 
                     await _refreshTokenRepository.AddTokenAsync(new RefreshToken
@@ -77,7 +77,7 @@ namespace ShopApplication.Services
                 var user = await _repository.GetUserByIdAsync(token.UserId);
                 if (user != null)
                 {
-                    var newToken = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString());
+                    var newToken = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString(), user.Id);
                     var newRefreshToken = _jwtService.GenerateRefreshToken();
 
                     token.IsRevoked = true;
@@ -106,7 +106,7 @@ namespace ShopApplication.Services
                 var updatedUser = await _repository.UpdateUserAsync(user);
                 if (updatedUser != null)
                 {
-                    var newToken = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(updatedUser), updatedUser.Role.ToString());
+                    var newToken = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(updatedUser), updatedUser.Role.ToString(), user.Id);
                     var refreshToken = _jwtService.GenerateRefreshToken();
 
                     await _refreshTokenRepository.AddTokenAsync(new RefreshToken
