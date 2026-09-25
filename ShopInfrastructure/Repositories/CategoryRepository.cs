@@ -27,6 +27,11 @@ namespace ShopInfrastructure.Repositories
             return await _context.Categories.FindAsync(id);
         }
 
+        public async Task<Category?> GetBySlugAsync(string slug)
+        {
+            return await _context.Categories.FirstOrDefaultAsync(c => c.Slug == slug);
+        }
+
         public async Task<ICollection<Category>> GetParentCategoriesAsync()
         {
             return await _context.Categories.Where(c => c.ParentId == null).ToListAsync();

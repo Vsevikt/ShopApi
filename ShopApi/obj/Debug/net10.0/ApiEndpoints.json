@@ -410,6 +410,32 @@
   },
   {
     "ContainingType": "ShopApi.Controllers.CategoryController",
+    "Method": "GetCategoryBySlug",
+    "RelativePath": "api/v1/Category/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ShopApplication.DTOs.Category.CategoryReadDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.CategoryController",
     "Method": "GetChildCategories",
     "RelativePath": "api/v1/Category/child",
     "HttpMethod": "GET",

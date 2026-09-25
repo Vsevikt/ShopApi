@@ -54,7 +54,7 @@ namespace ShopApi.Controllers
             return Ok($"Category created {id}");
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetCategoryById([FromRoute] int id)
         {
             var category = await _categoryService.GetCategoryByIdAsync(id);
@@ -64,6 +64,18 @@ namespace ShopApi.Controllers
 
             return Ok(category);
         }
+
+        [HttpGet("{slug}")]
+        public async Task<ActionResult<CategoryReadDTO>> GetCategoryBySlug(string slug)
+        {
+            var dto = await _categoryService.GetCategoryBySlugAsync(slug);
+
+            if (dto == null)
+                return NotFound();
+
+            return Ok(dto);
+        }
+
 
         [HttpGet]
         public async Task<IActionResult> GetAllCategories()

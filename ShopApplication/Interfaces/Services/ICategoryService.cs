@@ -11,6 +11,7 @@ namespace ShopApplication.Interfaces.Services
         Task<int?> CreateCategoryAsync(CategoryCreateDTO dto);
         Task<ICollection<CategoryReadDTO>> GetAllCategoriesAsync();
         Task<CategoryReadDTO?> GetCategoryByIdAsync(int id);
+        Task<CategoryReadDTO?> GetCategoryBySlugAsync(string slug);
         Task<bool> UpdateCategoryAsync(CategoryUpdateDTO dto);
         Task<int?> DeleteCategoryAsync(int id);
         Task<ICollection<CategoryReadDTO>> GetCategoriesByParentAsync();

@@ -3,18 +3,11 @@ using ShopApplication.Interfaces.Repositories;
 
 namespace ShopApplication.Commands.Product;
 
-public class DeleteProductByIdHandler : IRequestHandler<DeleteProductByIdCommand, int>
+public class DeleteProductByIdHandler(IProductRepository _repository) : IRequestHandler<DeleteProductByIdCommand, int>
 {
-    private readonly IProductRepository _repository;
-
-    public DeleteProductByIdHandler(IProductRepository repository)
+    public async Task<int> Handle(DeleteProductByIdCommand command, CancellationToken cancellationToken)
     {
-        _repository = repository;
-    }
-
-    public async Task<int> Handle(DeleteProductByIdCommand request, CancellationToken cancellationToken)
-    {
-        var product = await _repository.GetProductAsync(request.id);
+        var product = await _repository.GetProductAsync(command.id);
         if (product == null)
             return 0;
         product.IsActive = false;

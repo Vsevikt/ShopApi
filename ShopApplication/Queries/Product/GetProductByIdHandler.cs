@@ -6,17 +6,8 @@ using ShopApplication.Queries.Product;
 
 namespace ShopApplication.Queries.GetProductById;
 
-public class GetProductByIdHandler : IRequestHandler<GetProductByIdQuery, ProductReadDTO?>
+public class GetProductByIdHandler(IProductRepository _repository, IMapper _mapper) : IRequestHandler<GetProductByIdQuery, ProductReadDTO?>
 {
-    private readonly IProductRepository _repository;
-    private readonly IMapper _mapper;
-
-    public GetProductByIdHandler(IProductRepository repository, IMapper mapper)
-    {
-        _repository = repository;
-        _mapper = mapper;
-    }
-
     public async Task<ProductReadDTO?> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
     {
         var product = await _repository.GetProductAsync(request.id);

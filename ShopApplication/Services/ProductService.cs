@@ -17,7 +17,7 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class ProductService(IProductRepository _repository, IImageService _imageService, IMapper _mapper, ICachingService _cacheService ) : IProductService
+    public class ProductService(IProductRepository _repository, IImageService _imageService, IMapper _mapper, ICachingService _cacheService) : IProductService
     {
         public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
         {

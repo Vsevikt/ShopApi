@@ -10,6 +10,7 @@ namespace ShopApplication.Interfaces.Repositories
         Task<int?> AddCategoryAsync(Category category);
         Task<ICollection<Category>> GetCategoriesAsync();
         Task<Category?> GetCategoryAsync(int id);
+        Task<Category?> GetBySlugAsync(string slug);
         Task<bool> EditCategoryAsync(Category category);
         Task<int?> RemoveCategoryAsync(int id);
         Task<ICollection<Category>> GetParentCategoriesAsync();
