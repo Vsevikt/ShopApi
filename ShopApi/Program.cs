@@ -46,8 +46,8 @@ namespace ShopApi
             // DATABASE
             builder.Services.AddDbContext<ShopDbContext>(options =>
             {
-                //options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection"));
-                options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSqlServerConnection"));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection"));
+                //options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSqlServerConnection"));
             });
 
             var configuration = builder.Configuration;
