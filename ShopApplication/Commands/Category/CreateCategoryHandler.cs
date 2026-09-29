@@ -11,7 +11,6 @@ public class CreateCategoryHandler(ICategoryRepository repository) : IRequestHan
         {
             Name = command.Name,
             Slug = command.Slug,
-            Url = command.Url,
             ParentId = command.ParentId
         };
         await repository.AddCategoryAsync(category);

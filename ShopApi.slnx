@@ -1,5 +1,4 @@
 <Solution>
-  <Project Path="MyCalculator/MyCalculator.csproj" Id="d7c6b20e-1c67-4c52-b528-513eb6b426ee" />
   <Project Path="RabbitMqReader/RabbitMqReader.csproj" Id="49106777-88ea-4152-bf79-666ac79967e6" />
   <Project Path="ShopApi/ShopApi.csproj" />
   <Project Path="ShopApplication/ShopApplication.csproj" Id="17a0dc46-ac3d-4d78-81ca-d98e879d4c3f" />

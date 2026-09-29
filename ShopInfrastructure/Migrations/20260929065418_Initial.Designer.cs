@@ -12,7 +12,7 @@ using ShopInfrastructure.Data;
 namespace ShopInfrastructure.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    [Migration("20260928152102_Initial")]
+    [Migration("20260929065418_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -142,11 +142,6 @@ namespace ShopInfrastructure.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2")
                         .HasColumnName("updated_at");
-
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("url");
 
                     b.HasKey("Id");
 

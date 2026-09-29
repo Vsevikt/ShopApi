@@ -19,7 +19,6 @@ namespace ShopInfrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     slug = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    url = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     is_active = table.Column<bool>(type: "bit", nullable: false),
                     parent_id = table.Column<int>(type: "int", nullable: true),
                     IsShow = table.Column<bool>(type: "bit", nullable: false),

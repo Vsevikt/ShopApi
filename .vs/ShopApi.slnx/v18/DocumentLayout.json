@@ -7,32 +7,32 @@
       "RelativeMoniker": "D:0:0:{12728FB8-92C7-4A93-9896-62E15B452B20}|ShopTest\\ShopTest.csproj|solutionrelative:shoptest\\categorycontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12728FB8-92C7-4A93-9896-62E15B452B20}|ShopTest\\ShopTest.csproj|g:\\tasks\\shopapi\\shoptest\\calculatortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12728FB8-92C7-4A93-9896-62E15B452B20}|ShopTest\\ShopTest.csproj|solutionrelative:shoptest\\calculatortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\tasks\\ShopApi\\ShopInfrastructure\\Migrations\\20260929065418_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ShopInfrastructure\\Migrations\\20260929065418_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7C6B20E-1C67-4C52-B528-513EB6B426EE}|MyCalculator\\MyCalculator.csproj|g:\\tasks\\shopapi\\mycalculator\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C6B20E-1C67-4C52-B528-513EB6B426EE}|MyCalculator\\MyCalculator.csproj|solutionrelative:mycalculator\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\commands\\category\\createcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\commands\\category\\createcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7C6B20E-1C67-4C52-B528-513EB6B426EE}|MyCalculator\\MyCalculator.csproj|g:\\tasks\\shopapi\\mycalculator\\mycalculator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D7C6B20E-1C67-4C52-B528-513EB6B426EE}|MyCalculator\\MyCalculator.csproj|solutionrelative:mycalculator\\mycalculator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\productdtos\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\productdtos\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C5AA9B7-4443-48E3-2450-5A93365EAC99}|ShopDomain\\ShopDomain.csproj|g:\\tasks\\shopapi\\shopdomain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5AA9B7-4443-48E3-2450-5A93365EAC99}|ShopDomain\\ShopDomain.csproj|solutionrelative:shopdomain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12728FB8-92C7-4A93-9896-62E15B452B20}|ShopTest\\ShopTest.csproj|g:\\tasks\\shopapi\\shoptest\\shoptest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{12728FB8-92C7-4A93-9896-62E15B452B20}|ShopTest\\ShopTest.csproj|solutionrelative:shoptest\\shoptest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\productdtos\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\productdtos\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\exceptions\\handlerexceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\categorydtos\\categoryupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\categorydtos\\categoryupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5AA9B7-4443-48E3-2450-5A93365EAC99}|ShopDomain\\ShopDomain.csproj|g:\\tasks\\shopapi\\shopdomain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5AA9B7-4443-48E3-2450-5A93365EAC99}|ShopDomain\\ShopDomain.csproj|solutionrelative:shopdomain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\categorydtos\\categoryreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -183,37 +179,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CalculatorTest.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopTest\\CalculatorTest.cs",
-              "RelativeDocumentMoniker": "ShopTest\\CalculatorTest.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopTest\\CalculatorTest.cs",
-              "RelativeToolTip": "ShopTest\\CalculatorTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Title": "20260929065418_Initial.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Migrations\\20260929065418_Initial.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Migrations\\20260929065418_Initial.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Migrations\\20260929065418_Initial.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Migrations\\20260929065418_Initial.cs",
+              "ViewState": "AgIAABcBAAAAAAAAAAAqwBwBAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T17:04:00.276Z",
+              "WhenOpened": "2026-09-29T06:54:18.741Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CategoryCreateDTO.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
-              "RelativeDocumentMoniker": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
-              "RelativeToolTip": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CreateCategoryHandler.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Commands\\Category\\CreateCategoryHandler.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\Commands\\Category\\CreateCategoryHandler.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\Commands\\Category\\CreateCategoryHandler.cs",
+              "RelativeToolTip": "ShopApplication\\Commands\\Category\\CreateCategoryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T16:22:26.871Z"
+              "WhenOpened": "2026-09-29T06:52:10.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\CategoryController.cs",
               "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "ShopApi\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAswDIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T16:11:15.137Z",
               "EditorCaption": ""
@@ -232,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ProductCreateDTO.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\ProductDTOs\\ProductCreateDTO.cs",
               "RelativeDocumentMoniker": "ShopApplication\\DTOs\\ProductDTOs\\ProductCreateDTO.cs",
@@ -245,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ShopDbContext.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Data\\ShopDbContext.cs",
               "RelativeDocumentMoniker": "ShopInfrastructure\\Data\\ShopDbContext.cs",
@@ -264,14 +261,14 @@
               "RelativeDocumentMoniker": "ShopTest\\CategoryControllerTest.cs",
               "ToolTip": "G:\\tasks\\ShopApi\\ShopTest\\CategoryControllerTest.cs*",
               "RelativeToolTip": "ShopTest\\CategoryControllerTest.cs*",
-              "ViewState": "AgIAABMAAAAAAAAAAAAnwCsAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAMwCAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T17:47:17.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "ShopTest.csproj",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopTest\\ShopTest.csproj",
               "RelativeDocumentMoniker": "ShopTest\\ShopTest.csproj",
@@ -284,33 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MyCalculator.csproj",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\MyCalculator\\MyCalculator.csproj",
-              "RelativeDocumentMoniker": "MyCalculator\\MyCalculator.csproj",
-              "ToolTip": "G:\\tasks\\ShopApi\\MyCalculator\\MyCalculator.csproj",
-              "RelativeToolTip": "MyCalculator\\MyCalculator.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-28T17:12:35.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Calculator.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\MyCalculator\\Calculator.cs",
-              "RelativeDocumentMoniker": "MyCalculator\\Calculator.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\MyCalculator\\Calculator.cs",
-              "RelativeToolTip": "MyCalculator\\Calculator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T17:02:05.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "CategoryReadDTO.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryReadDTO.cs",
               "RelativeDocumentMoniker": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryReadDTO.cs",
@@ -319,6 +290,31 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T16:27:31.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Category.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopDomain\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "ShopDomain\\Models\\Category.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopDomain\\Models\\Category.cs",
+              "RelativeToolTip": "ShopDomain\\Models\\Category.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T16:38:04.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CategoryCreateDTO.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
+              "RelativeToolTip": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T16:22:26.871Z"
             },
             {
               "$type": "Document",
@@ -358,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "ItemsController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\ItemsController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\ItemsController.cs",
@@ -370,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "TestEmailController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\TestEmailController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\TestEmailController.cs",
@@ -406,19 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Category.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopDomain\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "ShopDomain\\Models\\Category.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopDomain\\Models\\Category.cs",
-              "RelativeToolTip": "ShopDomain\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T16:38:04.16Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "AuthController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\AuthController.cs",
@@ -430,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "CartController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\CartController.cs",
@@ -442,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "ProductReadDTO.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\ProductDTOs\\ProductReadDTO.cs",
               "RelativeDocumentMoniker": "ShopApplication\\DTOs\\ProductDTOs\\ProductReadDTO.cs",
@@ -454,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "ProductController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\ProductController.cs",
@@ -466,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Program.cs",
               "RelativeDocumentMoniker": "ShopApi\\Program.cs",

@@ -140,11 +140,6 @@ namespace ShopInfrastructure.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("updated_at");
 
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("url");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ParentId");

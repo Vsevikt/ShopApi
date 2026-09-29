@@ -26,7 +26,7 @@ namespace ShopTest
 
             var testCategory = new CategoryReadDTO
             {
-                Id = 11,
+                Id = 1,
                 Name = "jjjj"
             };
 

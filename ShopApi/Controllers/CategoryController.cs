@@ -22,7 +22,7 @@ namespace ShopApi.Controllers
     public class CategoryController(ICategoryService _categoryService, IImageService _imageService, IConfiguration _configuration, IConfiguration _mapper, IValidator<CategoryCreateDTO> _createValidator, IValidator<CategoryUpdateDTO> _updateValidator) : ControllerBase
     {
         [HttpPost]
-        public async Task<IActionResult> CreateCategory([FromForm] CategoryCreateRequest dto)
+        public async Task<IActionResult> CreateCategory([FromForm] CategoryCreateDTO dto)
         {
             var maxImages = _configuration.GetValue<int>("FileSettings:MaxProductImages");
             var maxSizeMb = _configuration.GetValue<int>("FileSettings:MaxFileSizeMb");
@@ -31,11 +31,6 @@ namespace ShopApi.Controllers
             var allowedExtensions = _configuration
                 .GetSection("FileSettings:AllowedExtensions")
                 .Get<string[]>();
-
-            dto.Url = await _imageService.SaveFileAsync(dto.Image, _configuration["DirnameForFiles:Categories"]);
-
-            if (dto.Image.Length > maxSizeBytes)
-                return BadRequest($"Maximum file size is {maxSizeMb} MB.");
 
             var createDto = new CategoryCreateDTO
             {

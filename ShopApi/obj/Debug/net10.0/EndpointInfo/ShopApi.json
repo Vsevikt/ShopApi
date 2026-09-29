@@ -432,10 +432,6 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "Image": {
-                    "type": "string",
-                    "format": "binary"
-                  },
                   "Name": {
                     "type": "string"
                   },
@@ -452,9 +448,6 @@
                 }
               },
               "encoding": {
-                "Image": {
-                  "style": "form"
-                },
                 "Name": {
                   "style": "form"
                 },
@@ -1158,10 +1151,6 @@
             "maxLength": 100,
             "minLength": 1,
             "type": "string"
-          },
-          "url": {
-            "type": "string",
-            "nullable": true
           },
           "isActive": {
             "type": "boolean"
