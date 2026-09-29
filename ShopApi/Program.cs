@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using ShopApi.Exceptions;
 using ShopApi.Services;
 using ShopApplication;
 using ShopApplication.Commands.DeliveryAddress;
@@ -182,6 +183,10 @@ namespace ShopApi
             // CACHE
             builder.Services.AddMemoryCache();
 
+            // EXCEPTIONS
+            builder.Services.AddProblemDetails();
+            builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
             // SERVICES
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IOrderService, OrderService>();
@@ -245,6 +250,8 @@ namespace ShopApi
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseExceptionHandler();
 
             app.MapControllers();
             app.UseStaticFiles();

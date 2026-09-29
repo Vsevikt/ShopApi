@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using ShopApi.Exceptions.HandlerExceptions;
 using ShopApi.Filters;
 using ShopApi.Requests.Products;
 using ShopApplication.Commands.Product;
@@ -88,9 +89,7 @@ namespace ShopApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProductById(
-    int id,
-    [FromForm] ProductUpdateRequest dto)
+        public async Task<IActionResult> UpdateProductById(int id, [FromForm] ProductUpdateRequest dto)
         {
             if (id != dto.Id)
                 return NotFound("Product not found");
@@ -164,8 +163,14 @@ namespace ShopApi.Controllers
         public async Task<IActionResult> SearchProduct([FromQuery] string name)
         {
             var products = await _productService.SearchProductAsync(name);
+            //if (products == null)
+            //    return NotFound("Product not found");
+
             if (products == null)
-                return NotFound("Product not found");
+            {
+                throw new NotFoundException("Name is not found");
+            }
+
             return Ok(products);
         }
 

@@ -430,9 +430,6 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": [
-                  "Name"
-                ],
                 "type": "object",
                 "properties": {
                   "Image": {
@@ -440,7 +437,6 @@
                     "format": "binary"
                   },
                   "Name": {
-                    "maxLength": 10,
                     "type": "string"
                   },
                   "Slug": {

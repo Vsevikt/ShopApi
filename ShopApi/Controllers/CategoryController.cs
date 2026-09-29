@@ -1,6 +1,9 @@
-﻿using FluentValidation;
+﻿using Azure.Core;
+using FluentValidation;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using ShopApi.Exceptions;
+using ShopApi.Exceptions.HandlerExceptions;
 using ShopApi.Requests.Categories;
 using ShopApi.Services;
 using ShopApplication.DTOs;
@@ -48,6 +51,11 @@ namespace ShopApi.Controllers
             {
                 return BadRequest(result.Errors);
             }
+
+            //if (createDto.ParentId == null)
+            //{
+            //    throw new Exception("null");
+            //}
 
             var id = await _categoryService.CreateCategoryAsync(createDto);
 
