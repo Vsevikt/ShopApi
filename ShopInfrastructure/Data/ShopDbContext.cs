@@ -21,6 +21,8 @@ namespace ShopInfrastructure.Data
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
         public DbSet<DeliveryAddress> DeliveryAddresses { get; set; }
+        public DbSet<Provider> Providers { get; set; }
+        public DbSet<UserProvider> UserProviders { get; set; }
 
 
         // Автоматично встановлює CreatedAt і UpdatedAt перед збереженням
@@ -124,6 +126,34 @@ namespace ShopInfrastructure.Data
                 .HasOne(x => x.User)
                 .WithMany(x => x.DeliveryAddresses)
                 .HasForeignKey(x => x.UserId);
+
+            modelBuilder.Entity<UserProvider>()
+                .HasOne(x => x.User)
+                .WithMany(x => x.UserProviders)
+                .HasForeignKey(x => x.UserId);
+
+            modelBuilder.Entity<UserProvider>()
+                .HasOne(x => x.Provider)
+                .WithMany(x => x.UserProviders)
+                .HasForeignKey(x => x.ProviderId);
+
+            modelBuilder.Entity<Provider>().HasData(
+                new Provider
+                {
+                    Id = 1,
+                    Name = "google"
+                },
+                new Provider
+                {
+                    Id = 2,
+                    Name = "facebook"
+                },
+                new Provider
+                {
+                    Id = 3,
+                    Name = "apple"
+                }
+            );
         }
     }
 

@@ -1,5 +1,8 @@
 ﻿using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -9,15 +12,71 @@ using ShopApplication.DTOs.DeliveryAddress;
 using ShopApplication.DTOs.UserDTOs;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Queries.DeliveryAddress;
+using ShopDomain.Enums;
+using ShopDomain.Models;
+using ShopInfrastructure.Services;
+using System.Security.Claims;
 using System.Text.Json;
 
 namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-
-    public class AuthController(IAuthService _authService, IQueueService _queueService, IMediator _mediator) : ControllerBase
+    public class AuthController(IAuthService _authService, IQueueService _queueService, IMediator _mediator, IJWTService _jwtService) : ControllerBase
     {
+        // Вхід через Google
+        [HttpGet("login-google")]
+        public IActionResult LoginGoogle()
+        {
+            var properties = new AuthenticationProperties
+            {
+                RedirectUri = Url.Action(nameof(ExternalResponse))
+            };
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+        // Зворотний виклик після успішної авторизації
+        [HttpGet("external-response")]
+        public async Task<IActionResult> ExternalResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme);
+
+            if (!result.Succeeded)
+                return BadRequest("Помилка зовнішньої аутентифікації.");
+
+            var claims = result.Principal.Identities.FirstOrDefault()?.Claims;
+
+            var email = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+            var name = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+            var providerId = claims?.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(email))
+                return BadRequest("Email не отримано.");
+
+            var response = await _authService.ExternalLoginAsync(email);
+
+            if (response.User == null)
+                return BadRequest("Не вдалося авторизувати користувача.");
+
+            return Ok(new
+            {
+                Name = name,
+                Email = response.User.Email,
+                ProviderId = providerId,
+                AccessToken = response.Token,
+                RefreshToken = response.RefreshToken
+            });
+        }
+
+        [HttpPost("logout")]
+        [Authorize]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Ok("Вихід успішний.");
+        }
+
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] UserCreateDTO dto)
         {

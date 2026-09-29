@@ -11,8 +11,59 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class AuthService(IMapper _mapper, IAuthRepository _repository, IHashHelper _hashHelper, IJWTService _jwtService, IRefreshTokenRepository _refreshTokenRepository, IPasswordResetTokenRepository _passwordResetTokenRepository, IEmailService _emailService, IQueueService _queueService) : IAuthService
+    public class AuthService(IMapper _mapper, IAuthRepository _repository, IHashHelper _hashHelper, IJWTService _jwtService, IRefreshTokenRepository _refreshTokenRepository, IPasswordResetTokenRepository _passwordResetTokenRepository, IEmailService _emailService, IQueueService _queueService, IUserProviderRepository _userProviderRepository) : IAuthService
     {
+        public async Task<(UserReadDTO? User, string? Token, string? RefreshToken)> ExternalLoginAsync(string email)
+        {
+            var user = await _repository.GetUserByEmailAsync(email);
+
+            if (user == null)
+            {
+                user = new User
+                {
+                    Email = email,
+                    PasswordHash = string.Empty,
+                    IsActive = true,
+                    Role = UserRole.User
+                };
+
+                user = await _repository.RegisterUserAsync(user, string.Empty);
+            }
+
+            if (user == null)
+                return (null, null, null);
+
+            await _userProviderRepository.AddAsync(new UserProvider
+            {
+                UserId = user.Id,
+                ProviderId = 1, // Google
+                NumberProvider = email,
+                CreatedAt = DateTime.UtcNow
+            });
+
+            var token = _jwtService.GenerateAccessToken(
+                _mapper.Map<UserLoginDTO>(user),
+                user.Role.ToString(),
+                user.Id);
+
+            var refreshToken = _jwtService.GenerateRefreshToken();
+
+            await _refreshTokenRepository.AddTokenAsync(new RefreshToken
+            {
+                Token = refreshToken.Item1,
+                UserId = user.Id,
+                IsRevoked = false,
+                CreatedAt = DateTime.UtcNow,
+                ExpiresAt = DateTime.UtcNow.AddDays(refreshToken.Item2)
+            });
+
+            return (
+                _mapper.Map<UserReadDTO>(user),
+                token,
+                refreshToken.Item1
+            );
+        }
+
         public async Task<(UserReadDTO? User, string? Token, string? RefreshToken)> RegisterAsync(UserCreateDTO dto)
         {
             var isExist = await _repository.IsExistEmailAsync(dto.Email);

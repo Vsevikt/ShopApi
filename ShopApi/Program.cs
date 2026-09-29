@@ -1,7 +1,9 @@
 using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using MongoDB.Bson;
@@ -126,12 +128,13 @@ namespace ShopApi
 
             //builder.Services.AddSwaggerGen();
 
-            // Authentication
+            // AUTHENTICATION (JWT + COOKIES + GOOGLE)
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
+
             .AddJwtBearer(options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters
@@ -140,16 +143,25 @@ namespace ShopApi
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-
                     ValidIssuer = jwtSettings.Issuer,
                     ValidAudience = jwtSettings.Audience,
+
                     IssuerSigningKey = new SymmetricSecurityKey(
                         Encoding.UTF8.GetBytes(jwtSettings.Key)
                     ),
-
                     ClockSkew = TimeSpan.Zero
                 };
+            })
+
+            .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddGoogle(options =>
+            {
+                options.ClientId = configuration["Authentication:Google:ClientId"]!;
+                options.ClientSecret = configuration["Authentication:Google:ClientSecret"]!;
+                options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             });
+
+            // AUTHORIZATION
 
             builder.Services.AddAuthorization();
             builder.Services.AddControllers();
@@ -212,6 +224,7 @@ namespace ShopApi
             builder.Services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
             builder.Services.AddScoped<IProductMessageRepository, ProductMessageRepository>();
             builder.Services.AddScoped<IDeliveryAddressRepository, DeliveryAddressRepository>();
+            builder.Services.AddScoped<IUserProviderRepository, UserProviderRepository>();
 
             // HELPERS
             builder.Services.AddSingleton<IHashHelper, HashHelper>();
