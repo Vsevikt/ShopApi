@@ -11,16 +11,188 @@
       "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\services\\memorycachingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\services\\memorycachingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\services\\orderprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\services\\orderprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\services\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\services\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\services\\rediscachingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\services\\rediscachingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\services\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\services\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\configuration\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\configuration\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\configuration\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\configuration\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\configuration\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\configuration\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\configuration\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\configuration\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\data\\adminseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\data\\adminseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\data\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\data\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\helpers\\hashhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\helpers\\hashhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|g:\\tasks\\shopapi\\shopinfrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E7CABB-3E0D-4EF7-B520-7ED37DEFC580}|ShopInfrastructure\\ShopInfrastructure.csproj|solutionrelative:shopinfrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\shopapplicationassemblymarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\shopapplicationassemblymarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\services\\productmessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\services\\productmessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\shopapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\shopapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\services\\rabbitmqreaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\services\\rabbitmqreaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\services\\orderprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\services\\orderprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\requests\\categories\\categoryupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\requests\\categories\\categoryupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\requests\\categories\\categorycreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\requests\\categories\\categorycreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\middelwares\\usercheckmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\middelwares\\usercheckmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\middelwares\\requesttimermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\middelwares\\requesttimermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\filters\\usercheckfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\filters\\usercheckfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\filters\\logactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\filters\\logactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\exceptions\\handlerexceptions\\validationappexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\exceptions\\handlerexceptions\\validationappexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\exceptions\\handlerexceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\exceptions\\handlerexceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\exceptions\\handlerexceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\exceptions\\handlerexceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\categorydtos\\categoryreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\categorydtos\\categoryreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\productdtos\\productmessagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,10 +203,6 @@
       "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\validators\\category\\updatecategoryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\categorydtos\\categoryreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\categorydtos\\categoryreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\categorydtos\\categoryupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\categorydtos\\categoryupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,24 +211,12 @@
       "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\categorydtos\\categorycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C5AA9B7-4443-48E3-2450-5A93365EAC99}|ShopDomain\\ShopDomain.csproj|g:\\tasks\\shopapi\\shopdomain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5AA9B7-4443-48E3-2450-5A93365EAC99}|ShopDomain\\ShopDomain.csproj|solutionrelative:shopdomain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5AA9B7-4443-48E3-2450-5A93365EAC99}|ShopDomain\\ShopDomain.csproj|g:\\tasks\\shopapi\\shopdomain\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5AA9B7-4443-48E3-2450-5A93365EAC99}|ShopDomain\\ShopDomain.csproj|solutionrelative:shopdomain\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|g:\\tasks\\shopapi\\shopapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6E7EDA-6BD6-0D3A-85AD-2A9EB6864B8B}|ShopApi\\ShopApi.csproj|solutionrelative:shopapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +226,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 25,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,33 +302,566 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RedisCachingService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\RedisCachingService.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Services\\RedisCachingService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\RedisCachingService.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Services\\RedisCachingService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:37:30.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RabbitMqService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\RabbitMqService.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Services\\RabbitMqService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\RabbitMqService.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Services\\RabbitMqService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:37:27.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Services\\EmailService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\EmailService.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Services\\EmailService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:37:06.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JWTService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\JWTService.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Services\\JWTService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\JWTService.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Services\\JWTService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:37:05.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderProcessingService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\OrderProcessingService.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Services\\OrderProcessingService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\OrderProcessingService.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Services\\OrderProcessingService.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:37:03.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RabbitMqSettings.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Configuration\\RabbitMqSettings.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Configuration\\RabbitMqSettings.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Configuration\\RabbitMqSettings.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Configuration\\RabbitMqSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:56.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\appsettings.json",
+              "RelativeDocumentMoniker": "ShopApi\\appsettings.json",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\appsettings.json",
+              "RelativeToolTip": "ShopApi\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-29T16:44:13.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\appsettings.Development.json",
               "RelativeDocumentMoniker": "ShopApi\\appsettings.Development.json",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\appsettings.Development.json*",
-              "RelativeToolTip": "ShopApi\\appsettings.Development.json*",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAvAAAAAAAAAA==",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\appsettings.Development.json",
+              "RelativeToolTip": "ShopApi\\appsettings.Development.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-09-30T16:13:56.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryUpdateDTO.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdateDTO.cs",
-              "RelativeDocumentMoniker": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdateDTO.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdateDTO.cs",
-              "RelativeToolTip": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "MongoDbService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\MongoDbService.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Services\\MongoDbService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\MongoDbService.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Services\\MongoDbService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T15:40:55.48Z",
+              "WhenOpened": "2026-09-30T16:37:32.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "MemoryCachingService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\MemoryCachingService.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Services\\MemoryCachingService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Services\\MemoryCachingService.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Services\\MemoryCachingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:37:38.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MongoDbSettings.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Configuration\\MongoDbSettings.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Configuration\\MongoDbSettings.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Configuration\\MongoDbSettings.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Configuration\\MongoDbSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:55.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Configuration\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Configuration\\JwtSettings.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Configuration\\JwtSettings.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Configuration\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:53.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Configuration\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Configuration\\EmailSettings.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Configuration\\EmailSettings.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Configuration\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:52.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ShopDbContext.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Data\\ShopDbContext.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Data\\ShopDbContext.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Data\\ShopDbContext.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Data\\ShopDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA9wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:48.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Data\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Data\\MongoDbContext.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Data\\MongoDbContext.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Data\\MongoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:46.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminSeeder.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Data\\AdminSeeder.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Data\\AdminSeeder.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Data\\AdminSeeder.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Data\\AdminSeeder.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:43.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HashHelper.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Helpers\\HashHelper.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Helpers\\HashHelper.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Helpers\\HashHelper.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Helpers\\HashHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:41.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RefreshTokenRepository.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Repositories\\RefreshTokenRepository.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Repositories\\RefreshTokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:38.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Repositories\\CartRepository.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Repositories\\CartRepository.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Repositories\\CartRepository.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Repositories\\CartRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:37.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:37.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "ShopInfrastructure\\Repositories\\OrderRepository.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopInfrastructure\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "ShopInfrastructure\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:36.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ShopApplicationAssemblyMarker.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\ShopApplicationAssemblyMarker.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\ShopApplicationAssemblyMarker.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\ShopApplicationAssemblyMarker.cs",
+              "RelativeToolTip": "ShopApplication\\ShopApplicationAssemblyMarker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:28.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\Services\\ProductService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\ProductService.cs",
+              "RelativeToolTip": "ShopApplication\\Services\\ProductService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:22.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductMessageService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\ProductMessageService.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\Services\\ProductMessageService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\ProductMessageService.cs",
+              "RelativeToolTip": "ShopApplication\\Services\\ProductMessageService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:20.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\Services\\CategoryService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\CategoryService.cs",
+              "RelativeToolTip": "ShopApplication\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:36:04.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\Services\\CartService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\CartService.cs",
+              "RelativeToolTip": "ShopApplication\\Services\\CartService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:54.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ShopApi.http",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\ShopApi.http",
+              "RelativeDocumentMoniker": "ShopApi\\ShopApi.http",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\ShopApi.http",
+              "RelativeToolTip": "ShopApi\\ShopApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-09-30T16:35:49.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RabbitMqReaderService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Services\\RabbitMqReaderService.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Services\\RabbitMqReaderService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Services\\RabbitMqReaderService.cs",
+              "RelativeToolTip": "ShopApi\\Services\\RabbitMqReaderService.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:29.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ImageService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Services\\ImageService.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Services\\ImageService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Services\\ImageService.cs",
+              "RelativeToolTip": "ShopApi\\Services\\ImageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:22.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\Services\\AuthService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\AuthService.cs",
+              "RelativeToolTip": "ShopApplication\\Services\\AuthService.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAIwA0AAADMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:30:27.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\Services\\OrderService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\OrderService.cs",
+              "RelativeToolTip": "ShopApplication\\Services\\OrderService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAgwA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T15:18:49.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "OrderProcessingService.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Services\\OrderProcessingService.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Services\\OrderProcessingService.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Services\\OrderProcessingService.cs",
+              "RelativeToolTip": "ShopApi\\Services\\OrderProcessingService.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:23.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CategoryUpdateRequest.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Requests\\Categories\\CategoryUpdateRequest.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Requests\\Categories\\CategoryUpdateRequest.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Requests\\Categories\\CategoryUpdateRequest.cs",
+              "RelativeToolTip": "ShopApi\\Requests\\Categories\\CategoryUpdateRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:16.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CategoryCreateRequest.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Requests\\Categories\\CategoryCreateRequest.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Requests\\Categories\\CategoryCreateRequest.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Requests\\Categories\\CategoryCreateRequest.cs",
+              "RelativeToolTip": "ShopApi\\Requests\\Categories\\CategoryCreateRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:15.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Program.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Program.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Program.cs",
+              "RelativeToolTip": "ShopApi\\Program.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAUwPwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T17:06:18.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UserCheckMiddleware.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Middelwares\\UserCheckMiddleware.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Middelwares\\UserCheckMiddleware.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Middelwares\\UserCheckMiddleware.cs",
+              "RelativeToolTip": "ShopApi\\Middelwares\\UserCheckMiddleware.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:12.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "RequestTimerMiddleware.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Middelwares\\RequestTimerMiddleware.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Middelwares\\RequestTimerMiddleware.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Middelwares\\RequestTimerMiddleware.cs",
+              "RelativeToolTip": "ShopApi\\Middelwares\\RequestTimerMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:11.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserCheckFilter.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Filters\\UserCheckFilter.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Filters\\UserCheckFilter.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Filters\\UserCheckFilter.cs",
+              "RelativeToolTip": "ShopApi\\Filters\\UserCheckFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:07.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "LogActionFilter.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Filters\\LogActionFilter.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Filters\\LogActionFilter.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Filters\\LogActionFilter.cs",
+              "RelativeToolTip": "ShopApi\\Filters\\LogActionFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:07.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ValidationAppException.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Exceptions\\HandlerExceptions\\ValidationAppException.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Exceptions\\HandlerExceptions\\ValidationAppException.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Exceptions\\HandlerExceptions\\ValidationAppException.cs",
+              "RelativeToolTip": "ShopApi\\Exceptions\\HandlerExceptions\\ValidationAppException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:05.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Exceptions\\HandlerExceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Exceptions\\HandlerExceptions\\NotFoundException.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Exceptions\\HandlerExceptions\\NotFoundException.cs",
+              "RelativeToolTip": "ShopApi\\Exceptions\\HandlerExceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:04.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Exceptions\\HandlerExceptions\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Exceptions\\HandlerExceptions\\GlobalExceptionHandler.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Exceptions\\HandlerExceptions\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "ShopApi\\Exceptions\\HandlerExceptions\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:35:04.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Controllers\\CartController.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\CartController.cs",
+              "RelativeToolTip": "ShopApi\\Controllers\\CartController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:34:15.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
               "Title": "CategoryReadDTO.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryReadDTO.cs",
               "RelativeDocumentMoniker": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryReadDTO.cs",
@@ -185,46 +874,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "ShopApplication\\Services\\OrderService.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\Services\\OrderService.cs",
-              "RelativeToolTip": "ShopApplication\\Services\\OrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T15:18:49.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 43,
               "Title": "OrderController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\OrderController.cs",
               "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\OrderController.cs",
               "RelativeToolTip": "ShopApi\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-30T15:14:55.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 46,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\CategoryController.cs",
               "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "ShopApi\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAmwHsAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAwHsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-30T15:10:34.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 42,
               "Title": "ProductController.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "ShopApi\\Controllers\\ProductController.cs",
@@ -237,7 +913,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 44,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ShopApi\\Controllers\\AuthController.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ShopApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAIwKkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:05:47.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CategoryUpdateDTO.cs",
+              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdateDTO.cs",
+              "RelativeDocumentMoniker": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdateDTO.cs",
+              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdateDTO.cs",
+              "RelativeToolTip": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T15:40:55.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
               "Title": "UpdateCategoryValidator.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\Validators\\Category\\UpdateCategoryValidator.cs",
               "RelativeDocumentMoniker": "ShopApplication\\Validators\\Category\\UpdateCategoryValidator.cs",
@@ -250,33 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\appsettings.json",
-              "RelativeDocumentMoniker": "ShopApi\\appsettings.json",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\appsettings.json",
-              "RelativeToolTip": "ShopApi\\appsettings.json",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-29T16:44:13.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "ShopApi\\Controllers\\AuthController.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "ShopApi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T16:05:47.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 48,
               "Title": "ProductMessageCreateDTO.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\ProductDTOs\\ProductMessageCreateDTO.cs",
               "RelativeDocumentMoniker": "ShopApplication\\DTOs\\ProductDTOs\\ProductMessageCreateDTO.cs",
@@ -289,7 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 51,
               "Title": "CategoryCreateDTO.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
               "RelativeDocumentMoniker": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryCreateDTO.cs",
@@ -302,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 52,
               "Title": "Category.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopDomain\\Models\\Category.cs",
               "RelativeDocumentMoniker": "ShopDomain\\Models\\Category.cs",
@@ -315,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 53,
               "Title": "Product.cs",
               "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopDomain\\Models\\Product.cs",
               "RelativeDocumentMoniker": "ShopDomain\\Models\\Product.cs",
@@ -324,19 +1000,6 @@
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-30T15:03:07.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApi\\Program.cs",
-              "RelativeDocumentMoniker": "ShopApi\\Program.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApi\\Program.cs",
-              "RelativeToolTip": "ShopApi\\Program.cs",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAUwPwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T17:06:18.251Z",
               "EditorCaption": ""
             }
           ]

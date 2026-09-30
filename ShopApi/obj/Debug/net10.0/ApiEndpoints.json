@@ -16,6 +16,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ShopApi.Controllers.AddressController",
+    "Method": "AddAddress",
+    "RelativePath": "api/v1/Address/address",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ShopApplication.DTOs.DeliveryAddress.DeliveryAddressCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.AddressController",
+    "Method": "GetAddressById",
+    "RelativePath": "api/v1/Address/address/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ShopApi.Controllers.AuthController",
     "Method": "ChangeRole",
     "RelativePath": "api/v1/Auth/{id}/role",
@@ -31,38 +63,6 @@
       {
         "Name": "dto",
         "Type": "ShopApplication.DTOs.UserDTOs.ChangeRoleDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.AuthController",
-    "Method": "AddAddress",
-    "RelativePath": "api/v1/Auth/address",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "ShopApplication.DTOs.DeliveryAddress.DeliveryAddressCreateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.AuthController",
-    "Method": "GetAddressById",
-    "RelativePath": "api/v1/Auth/address/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
