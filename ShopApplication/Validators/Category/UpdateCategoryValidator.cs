@@ -22,8 +22,5 @@ public class UpdateCategoryValidator : AbstractValidator<CategoryUpdateDTO>
             .MaximumLength(20)
             .WithMessage("Slug не може бути довшим за 20 символів");
 
-        RuleFor(category => category.Url)
-            .MaximumLength(500)
-            .WithMessage("URL не може бути довшим за 500 символів");
     }
 }

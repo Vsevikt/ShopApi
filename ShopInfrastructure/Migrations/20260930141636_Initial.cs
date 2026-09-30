@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace ShopInfrastructure.Migrations
 {
     /// <inheritdoc />
@@ -54,6 +56,19 @@ namespace ShopInfrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "providers",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_providers", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "users",
                 columns: table => new
                 {
@@ -63,6 +78,7 @@ namespace ShopInfrastructure.Migrations
                     password_hash = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     role = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     is_active = table.Column<bool>(type: "bit", nullable: false),
+                    is_email_verified = table.Column<bool>(type: "bit", nullable: false),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
                     updated_at = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -169,6 +185,34 @@ namespace ShopInfrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "users_providers",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    user_id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    provider_id = table.Column<int>(type: "int", nullable: false),
+                    number_provider = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_users_providers", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_users_providers_providers_provider_id",
+                        column: x => x.provider_id,
+                        principalTable: "providers",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_users_providers_users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "users",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "carts",
                 columns: table => new
                 {
@@ -241,6 +285,16 @@ namespace ShopInfrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "providers",
+                columns: new[] { "id", "name" },
+                values: new object[,]
+                {
+                    { 1, "google" },
+                    { 2, "facebook" },
+                    { 3, "apple" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_carts_product_id",
                 table: "carts",
@@ -297,6 +351,16 @@ namespace ShopInfrastructure.Migrations
                 table: "users",
                 column: "email",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_users_providers_provider_id",
+                table: "users_providers",
+                column: "provider_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_users_providers_user_id",
+                table: "users_providers",
+                column: "user_id");
         }
 
         /// <inheritdoc />
@@ -321,10 +385,16 @@ namespace ShopInfrastructure.Migrations
                 name: "refresh_token");
 
             migrationBuilder.DropTable(
+                name: "users_providers");
+
+            migrationBuilder.DropTable(
                 name: "orders");
 
             migrationBuilder.DropTable(
                 name: "products");
+
+            migrationBuilder.DropTable(
+                name: "providers");
 
             migrationBuilder.DropTable(
                 name: "users");

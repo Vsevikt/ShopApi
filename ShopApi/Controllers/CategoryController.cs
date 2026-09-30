@@ -35,7 +35,6 @@ namespace ShopApi.Controllers
             var createDto = new CategoryCreateDTO
             {
                 Name = dto.Name,
-                Url = dto.Url,
                 Slug = dto.Slug,
                 ParentId = dto.ParentId == 0 ? null : dto.ParentId,
             };
@@ -119,22 +118,11 @@ namespace ShopApi.Controllers
                 .GetSection("FileSettings:AllowedExtensions")
                 .Get<string[]>();
 
-            var extension = Path.GetExtension(dto.Image.FileName).ToLower();
-
-            if (!allowedExtensions.Contains(extension))
-                return BadRequest("Invalid file type.");
-
-            if (dto.Image.Length > maxSizeBytes)
-                return BadRequest($"Maximum file size is {maxSizeMb} MB.");
-
-            dto.Url = await _imageService.SaveFileAsync(dto.Image, _configuration["DirnameForFiles:Categories"]);
-
             var updateDto = new CategoryUpdateDTO
             {
                 Id = id,
                 Name = dto.Name,
                 Slug = dto.Slug,
-                Url = dto.Url,
                 ParentId = dto.ParentId == 0 ? null : dto.ParentId
             };
 

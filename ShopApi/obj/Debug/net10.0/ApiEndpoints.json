@@ -16,38 +16,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ShopApi.Controllers.ShopApi.Controllers.TestEmailController",
-    "Method": "SendTestEmail",
-    "RelativePath": "api/TestEmail/send-test",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "toEmail",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShopApi.Controllers.UserController",
-    "Method": "Register",
-    "RelativePath": "api/user/register",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "user",
-        "Type": "ShopDomain.Models.User",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "ShopApi.Controllers.AuthController",
     "Method": "ChangeRole",
     "RelativePath": "api/v1/Auth/{id}/role",
@@ -329,11 +297,6 @@
         "IsRequired": false
       },
       {
-        "Name": "Url",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "ParentId",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
@@ -397,11 +360,6 @@
       },
       {
         "Name": "Slug",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Url",
         "Type": "System.String",
         "IsRequired": false
       },
